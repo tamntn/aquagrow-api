@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 // public folder setup
 // the root is at the 'public' folder itself
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
