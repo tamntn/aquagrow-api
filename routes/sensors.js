@@ -11,7 +11,7 @@ function stringToObject(input) {
 }
 
 module.exports = function (app) {
-    // app.use(bodyParser.json());
+    app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
 
     app.get('/api/sensors', function (req, res) {
@@ -31,7 +31,10 @@ module.exports = function (app) {
         });
 
         newSensor.save(function (err, sensor) {
-            if (err) throw err;
+            if (err) {
+                res.send('Error: Sensors Data Not Added...');
+                throw err
+            };
             console.log(sensor);
             res.send('Sensors Data Added');
         })
