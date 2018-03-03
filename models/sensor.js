@@ -3,8 +3,10 @@ var Schema = mongoose.Schema;
 
 const sensorSchema = new Schema({
     time: Date,
-    temp: String,
-    humidity: String
+    airTemp: String,
+    airHumidity: String,
+    lightIntensity: String,
+    waterTemp: String
 });
 
 var Sensor = mongoose.model('sensors', sensorSchema);

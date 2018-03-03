@@ -1,9 +1,17 @@
 var bodyParser = require('body-parser');
+var _ = require('lodash');
 var moment = require('moment');
 var Sensor = require('../models/sensor');
 
+// Convert incoming data to Object
+// Use in case incoming data is a string of format 'key=value&key=value'
+function stringToObject(input) {
+    let result = _.fromPairs(input.split('&').map(s => s.split('=')))
+    console.log(result);
+}
+
 module.exports = function (app) {
-    app.use(bodyParser.json());
+    // app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
 
     app.get('/api/sensors', function (req, res) {
@@ -16,8 +24,10 @@ module.exports = function (app) {
         // Add new sensor data
         const newSensor = Sensor({
             time: moment().format(),
-            temp: req.body.temp,
-            humidity: req.body.humidity
+            airTemp: req.body.airTemp,
+            airHumidity: req.body.airHumidity,
+            lightIntensity: req.body.lightIntensity,
+            waterTemp: req.body.waterTemp
         });
 
         newSensor.save(function (err, sensor) {
