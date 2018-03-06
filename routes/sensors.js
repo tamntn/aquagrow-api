@@ -11,17 +11,31 @@ function stringToObject(input) {
 }
 
 module.exports = function (app) {
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: true }));
+    // app.use(bodyParser.json());
+    // app.use(bodyParser.urlencoded({ extended: true }));
 
+    /*
+    ** /GET Route
+    */
     app.get('/api/sensors', function (req, res) {
         Sensor.find({}, (err, sensors) => {
-            res.json(sensors);
+            if (err) {
+                res.send({
+                    message: "Sensors GET request failed"
+                });
+            }
+            res.send({
+                message: "Sensors GET request successful",
+                data: sensors
+            });
         })
     })
 
+    /*
+    ** /POST Route
+    */
     app.post('/api/sensors', function (req, res) {
-        // Add new sensor data
+        // Create a new instance of the Sensor Schema
         const newSensor = Sensor({
             time: moment().format(),
             airTemp: req.body.airTemp,
@@ -30,26 +44,40 @@ module.exports = function (app) {
             waterTemp: req.body.waterTemp
         });
 
+        // Add new sensor data
         newSensor.save(function (err, sensor) {
             if (err) {
-                res.send('Error: Sensors Data Not Added...');
-                throw err
+                res.send({
+                    message: "Sensors POST request failed"
+                });
             };
-            console.log(sensor);
-            res.send('Sensors Data Added');
+            res.send({
+                message: "Sensors POST request successful",
+                data: sensor
+            });
         })
     });
 
+    /*
+    ** /DELETE Route
+    */
     app.delete('/api/sensors/', function (req, res) {
         if (req.body.id) {
-            Sensor.findByIdAndRemove(req.body.id, err => {
-                if(err) throw err;
-                res.send(`Sensors Data At id: ${req.body.id} Deleted.`);
+            Sensor.findByIdAndRemove(req.body.id, (err, sensor) => {
+                if (err) {
+                    res.send({
+                        message: "Sensors DELETE request failed"
+                    });
+                };
+                res.send({
+                    message: "Sensors DELETE request successful",
+                    data: sensor
+                });
             })
         } else {
-            res.json({
-                err: "Delete request failed."
-            })
+            res.send({
+                message: "Sensors DELETE request failed"
+            });
         }
     })
 }

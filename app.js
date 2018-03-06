@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var databaseConfig = require('./config/db.json');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -29,11 +30,11 @@ app.use(cookieParser());
 // the root is at the 'public' folder itself
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
+// Connect to mongoDB database
+mongoose.connect(databaseConfig.databaseURI);
+
 app.use('/', index);
 app.use('/users', users);
-
-// Connect to mongoDB database
-mongoose.connect('mongodb://test:test@ds139801.mlab.com:39801/mongo-test');
 
 sensors(app);
 
