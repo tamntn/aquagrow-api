@@ -21,7 +21,7 @@ module.exports = function (app) {
         Sensor.find({}, (err, sensors) => {
             if (err) {
                 res.send({
-                    message: "Sensors GET request failed"
+                    error: "Sensors GET request failed"
                 });
             }
             res.send({
@@ -48,7 +48,7 @@ module.exports = function (app) {
         newSensor.save(function (err, sensor) {
             if (err) {
                 res.send({
-                    message: "Sensors POST request failed"
+                    error: "Sensors POST request failed"
                 });
             };
             res.send({
@@ -66,7 +66,7 @@ module.exports = function (app) {
             Sensor.findByIdAndRemove(req.body.id, (err, sensor) => {
                 if (err) {
                     res.send({
-                        message: "Sensors DELETE request failed"
+                        error: "Sensors DELETE request failed"
                     });
                 };
                 res.send({
@@ -76,7 +76,7 @@ module.exports = function (app) {
             })
         } else {
             res.send({
-                message: "Sensors DELETE request failed"
+                error: "Sensors DELETE request failed"
             });
         }
     })
