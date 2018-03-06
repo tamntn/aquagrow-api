@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "start-dev": "nodemon ./bin/www",
-    "test": "mocha --recursive"
+    "test": "mocha --recursive --exit"
   },
   "repository": {
     "type": "git",
