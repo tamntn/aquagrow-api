@@ -2,7 +2,6 @@
 process.env.NODE_ENV = 'test';
 
 let mongoose = require('mongoose');
-let Sensor = require('../models/sensor');
 
 // Dev Dependencies
 let chai = require('chai');
