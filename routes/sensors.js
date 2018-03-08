@@ -61,9 +61,9 @@ module.exports = function (app) {
     /*
     ** /DELETE Route
     */
-    app.delete('/api/sensors/', function (req, res) {
-        if (req.body.id) {
-            Sensor.findByIdAndRemove(req.body.id, (err, sensor) => {
+    app.delete('/api/sensors/:id', function (req, res) {
+        if (req.params.id) {
+            Sensor.findByIdAndRemove(req.params.id, (err, sensor) => {
                 if (err) {
                     res.send({
                         error: "Sensors DELETE request failed"
