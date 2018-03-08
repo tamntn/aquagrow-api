@@ -1,7 +1,7 @@
 var bodyParser = require('body-parser');
 var _ = require('lodash');
 var moment = require('moment');
-var Sensor = require('../models/sensor');
+var Sensor = require('../models/Sensor');
 
 // Convert incoming data to Object
 // Use in case incoming data is a string of format 'key=value&key=value'
