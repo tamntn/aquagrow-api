@@ -10,10 +10,11 @@ var mongoose = require('mongoose');
 var databaseConfig = require('./config/db.json');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 
 // api controllers
+var users = require('./routes/users');
 var sensors = require('./routes/sensors');
+var authenticate = require('./routes/authenticate');
 
 var app = express();
 
@@ -36,13 +37,13 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 mongoose.connect(databaseConfig.databaseURI);
 
 app.use('/', index);
-app.use('/users', users);
-
 sensors(app);
+users(app);
+authenticate(app);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
