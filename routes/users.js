@@ -49,11 +49,16 @@ module.exports = function (app) {
 				res.send({
 					error: "GET user by username request failed"
 				});
+			} else if (!user) {
+				res.send({
+					error: "GET user by username request failed: username not found!"
+				})
+			} else {
+				res.send({
+					message: "GET user by username request successful",
+					user: user
+				})
 			}
-			res.send({
-				message: "GET user by username request successful",
-				user: user
-			})
 		})
 	})
 
