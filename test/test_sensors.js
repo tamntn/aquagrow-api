@@ -22,13 +22,24 @@ describe('API endpoint: /api/sensors', () => {
     /*
     ** Testing the sensor /GET route
     */
+    // describe('/GET Sensors', () => {
+    //     it('it should GET all the sensors', (done) => {
+    //         chai.request(server)
+    //             .get('/api/sensors')
+    //             .end((err, res) => {
+    //                 res.should.have.status(200);
+    //                 res.body.should.be.a('object');
+    //                 done();
+    //             })
+    //     })
+    // });
+
     describe('/GET Sensors', () => {
-        it('it should GET all the sensors', (done) => {
+        it('it should not GET all the sensors without the JWT', (done) => {
             chai.request(server)
                 .get('/api/sensors')
                 .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('object');
+                    res.should.have.status(401);
                     done();
                 })
         })
