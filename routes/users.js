@@ -68,7 +68,7 @@ module.exports = function (app) {
 	app.post('/api/user', (req, res) => {
 		const newUser = User({
 			username: req.body.username,
-			password: bcrypt.hashSync(req.body.password, salt)
+			password: req.body.password
 		})
 
 		newUser.save((err, user) => {
