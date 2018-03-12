@@ -13,6 +13,10 @@ npm run start-dev
 * In test script:
     * ```--recursive``` makes Mocha run all test files in the test folder
     * ```--exit``` forces Mocha to exit after running all tests. This will prevent Travis CI to stall during builds, which leads to build failure. Reference [here](https://github.com/mochajs/mocha/issues/3044)
+### High-level Steps to Implement JSON Web Tokens with Passport.js
+* Create middleware for validating the token - ```config/passport-jwt.js```
+* When the user signs in, create a signed token and returns it with the response
+* Add ```passport.authenticate('jwt', { session: false })``` to any route that required protections
 
 ## References
 * [Mongoose Schema Types](http://mongoosejs.com/docs/schematypes.html)
@@ -21,8 +25,3 @@ npm run start-dev
 * [Travis-CI](https://docs.travis-ci.com)
 * [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
 * [Passport-jwt](https://github.com/themikenicholson/passport-jwt)
-
-## High-level Steps to Implement JSON Web Tokens with Passport.js
-* Create middleware for validating the token - ```config/passport-jwt.js```
-* When the user signs in, create a signed token and returns it with the response
-* Add ```passport.authenticate('jwt', { session: false })``` to any route that required protections
