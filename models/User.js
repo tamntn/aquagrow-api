@@ -10,6 +10,7 @@ const userSchema = new Schema({
     password: { type: String, required: true },
 });
 
+// Hash password 'before' save
 userSchema.pre('save', function (next) {
     const user = this;
     if (this.isModified('password') || this.isNew) {

@@ -1,32 +1,40 @@
+var express = require('express');
+var router = express.Router();
 var bcrypt = require('bcryptjs');
 var User = require('../models/User');
+var jwt = require('jsonwebtoken');
+var databaseConfig = require('../config/db');
 
-module.exports = function (app) {
-    /*
-    ** /POST Route
-    ** Authenticate via username and password
-    */
-    app.post('/api/authenticate', (req, res) => {
-        User.findOne({ username: req.body.username }, (err, user) => {
-            if (err) {
+/*
+** /POST Route
+** Authenticate via username and password
+*/
+router.post('/api/signin', (req, res) => {
+    User.findOne({ username: req.body.username }, (err, user) => {
+        if (err) {
+            console.log(err);
+            res.status(401).send({
+                error: "User authentication failed"
+            })
+        } else if (!user) {
+            res.status(401).send({
+                error: "User authentication failed: user doesn't exist!"
+            })
+        } else {
+            if (bcrypt.compareSync(req.body.password, user.password)) {
+                // if user is found and password is right create a token
+                var token = jwt.sign(user.toJSON(), databaseConfig.secret);
                 res.send({
-                    error: "User authentication failed"
-                })
-            } else if (!user) {
-                res.send({
-                    error: "User authentication failed: user doesn't exist!"
+                    message: "User authentication successful",
+                    token: "JWT " + token
                 })
             } else {
-                if (bcrypt.compareSync(req.body.password, user.password)) {
-                    res.send({
-                        message: "User authentication successful"
-                    })
-                } else {
-                    res.send({
-                        error: "User authentication failed: wrong password!"
-                    })
-                }
+                res.status(401).send({
+                    error: "User authentication failed: wrong password!"
+                })
             }
-        })
+        }
     })
-}
+})
+
+module.exports = router;

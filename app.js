@@ -7,7 +7,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var passport = require('passport');
 var databaseConfig = require('./config/db');
+require('./config/passport-jwt')(passport);
 
 var index = require('./routes/index');
 
@@ -36,10 +38,13 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // Connect to mongoDB database
 mongoose.connect(databaseConfig.databaseURI);
 
+// Initialize passport
+app.use(passport.initialize());
+
 app.use('/', index);
-sensors(app);
-users(app);
-authenticate(app);
+app.use('/', authenticate);
+app.use('/', sensors);
+app.use('/', users);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
