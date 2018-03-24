@@ -36,7 +36,9 @@ app.use(cookieParser());
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Connect to mongoDB database
-mongoose.connect(databaseConfig.databaseURI);
+if (process.env.NODE_ENV !== 'test') {
+  mongoose.connect(databaseConfig.devURI);
+}
 
 // Initialize passport
 app.use(passport.initialize());
