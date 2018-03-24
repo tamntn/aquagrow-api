@@ -3,20 +3,44 @@ var router = express.Router();
 var User = require('../models/User');
 
 /*
+** /POST Route
+*/
+router.post('/api/user', (req, res) => {
+	const newUser = new User({
+		username: req.body.username,
+		password: req.body.password
+	})
+
+	newUser.save()
+		.then((user) => {
+			res.send({
+				message: "POST user request successful",
+				user: user
+			})
+		})
+		.catch((err) => {
+			res.send({
+				error: err.message
+			})
+		})
+})
+
+/*
 ** /GET Route (All)
 */
 router.get('/api/users', (req, res) => {
-	User.find({}, (err, users) => {
-		if (err) {
+	User.find({})
+		.then((users) => {
 			res.send({
-				error: "GET all users request failed"
+				message: "GET all users request successful",
+				users: users
 			})
-		}
-		res.send({
-			message: "GET all users request successful",
-			users: users
 		})
-	})
+		.catch((err) => {
+			res.send({
+				error: err.message
+			})
+		})
 })
 
 /*
@@ -42,63 +66,43 @@ router.get('/api/users', (req, res) => {
 ** /GET Route (By username)
 */
 router.get('/api/user/:username', (req, res) => {
-	User.findOne({ username: req.params.username }, (err, user) => {
-		if (err) {
-			res.send({
-				error: "GET user by username request failed"
-			});
-		} else if (!user) {
-			res.send({
-				error: "GET user by username request failed: username not found!"
-			})
-		} else {
-			res.send({
-				message: "GET user by username request successful",
-				user: user
-			})
-		}
-	})
-})
-
-/*
-** /POST Route
-*/
-router.post('/api/user', (req, res) => {
-	const newUser = User({
-		username: req.body.username,
-		password: req.body.password
-	})
-
-	newUser.save((err, user) => {
-		if (err) {
-			res.send({
-				error: "POST user request failed"
-			})
-			return;
-		}
-		res.send({
-			message: "POST user request successful",
-			user: user
-		})
-	})
-})
-
-/*
-** /DELETE Route (By username)
-*/
-router.delete('/api/user/:username', (req, res) => {
-	if (req.params.username) {
-		User.findOneAndRemove({ username: req.params.username }, (err, user) => {
-			if (err) {
+	User.findOne({ username: req.params.username })
+		.then((user) => {
+			if (!user) {
 				res.send({
-					error: "DELETE user request failed"
-				});
-			};
+					error: "GET user by username request failed: username not found!"
+				})
+			} else {
+				res.send({
+					message: "GET user by username request successful",
+					user: user
+				})
+			}
+		})
+		.catch((err) => {
 			res.send({
-				message: "DELETE user request successful",
-				user: user
+				error: err.message
 			});
 		})
+})
+
+/*
+** /DELETE Route (By Id)
+*/
+router.delete('/api/user/:id', (req, res) => {
+	if (req.params.id) {
+		User.findOneAndRemove({ _id: req.params.id })
+			.then((user) => {
+				res.send({
+					message: "DELETE user request successful",
+					user: user
+				});
+			})
+			.catch((err) => {
+				res.send({
+					error: err.message
+				});
+			})
 	} else {
 		res.send({
 			error: "DELETE user request failed"

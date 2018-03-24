@@ -21,17 +21,18 @@ function stringToObject(input) {
 ** /GET Route
 */
 router.get('/api/sensors', passport.authenticate('jwt', { session: false }), function (req, res) {
-    Sensor.find({}, (err, sensors) => {
-        if (err) {
+    Sensor.find({})
+        .then((sensors) => {
             res.send({
-                error: "Sensors GET request failed"
+                message: "Sensors GET request successful",
+                data: sensors
             });
-        }
-        res.send({
-            message: "Sensors GET request successful",
-            data: sensors
-        });
-    })
+        })
+        .catch((err) => {
+            res.send({
+                error: err.message
+            });
+        })
 })
 
 /*
@@ -39,7 +40,7 @@ router.get('/api/sensors', passport.authenticate('jwt', { session: false }), fun
 */
 router.post('/api/sensors', function (req, res) {
     // Create a new instance of the Sensor Schema
-    const newSensor = Sensor({
+    const newSensor = new Sensor({
         time: moment().format(),
         airTemp: req.body.airTemp,
         airHumidity: req.body.airHumidity,
@@ -48,17 +49,18 @@ router.post('/api/sensors', function (req, res) {
     });
 
     // Add new sensor data
-    newSensor.save(function (err, sensor) {
-        if (err) {
+    newSensor.save()
+        .then((sensor) => {
             res.send({
-                error: "Sensors POST request failed"
+                message: "Sensors POST request successful",
+                data: sensor
+            })
+        })
+        .catch((err) => {
+            res.send({
+                error: err.message
             });
-        };
-        res.send({
-            message: "Sensors POST request successful",
-            data: sensor
-        });
-    })
+        })
 });
 
 /*
@@ -66,17 +68,18 @@ router.post('/api/sensors', function (req, res) {
 */
 router.delete('/api/sensors/:id', function (req, res) {
     if (req.params.id) {
-        Sensor.findByIdAndRemove(req.params.id, (err, sensor) => {
-            if (err) {
+        Sensor.findByIdAndRemove(req.params.id)
+            .then((sensor) => {
                 res.send({
-                    error: "Sensors DELETE request failed"
+                    message: "Sensors DELETE request successful",
+                    data: sensor
                 });
-            };
-            res.send({
-                message: "Sensors DELETE request successful",
-                data: sensor
-            });
-        })
+            })
+            .catch((err) => {
+                res.send({
+                    error: err.message
+                });
+            })
     } else {
         res.send({
             error: "Sensors DELETE request failed"
