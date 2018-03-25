@@ -30,6 +30,7 @@ router.post('/api/user', (req, res) => {
 */
 router.get('/api/users', (req, res) => {
 	User.find({})
+		.select('username')
 		.then((users) => {
 			res.send({
 				message: "GET all users request successful",
