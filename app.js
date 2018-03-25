@@ -15,6 +15,7 @@ var index = require('./routes/index');
 
 // api controllers
 var users = require('./routes/users');
+var system = require('./routes/system');
 var sensors = require('./routes/sensors');
 var authenticate = require('./routes/authenticate');
 
@@ -26,7 +27,9 @@ app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+if (process.env.NODE_ENV !== 'test') {
+	app.use(logger('dev'));
+}
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -47,6 +50,7 @@ app.use(passport.initialize());
 
 app.use('/', index);
 app.use('/', authenticate);
+app.use('/', system);
 app.use('/', sensors);
 app.use('/', users);
 
