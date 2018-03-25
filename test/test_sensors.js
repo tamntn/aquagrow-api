@@ -1,12 +1,12 @@
-let mongoose = require('mongoose');
-let Sensor = require('../models/Sensor');
+const mongoose = require('mongoose');
+const Sensor = require('../models/Sensor');
 
 // Dev Dependencies
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../app');
-let should = chai.should();
-let assert = chai.assert;
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const server = require('../app');
+const should = chai.should();
+const assert = chai.assert;
 
 chai.use(chaiHttp);
 
@@ -20,7 +20,7 @@ describe('API endpoint: /api/sensors', () => {
     /*
     ** Testing the sensor /GET route
     */
-    it('it should not GET all the sensors without the JWT', (done) => {
+    it('GET request to /api/sensors should be unauthorized without a JWT', (done) => {
         chai.request(server)
             .get('/api/sensors')
             .end((err, res) => {
@@ -32,7 +32,7 @@ describe('API endpoint: /api/sensors', () => {
     /*
     ** Testing the sensor /POST route
     */
-    it('it should not POST the sensors data without all required fields', (done) => {
+    it('POST request to /api/sensors should return an error without all required fields', (done) => {
         let sensor = {
             airTemp: "34",
             airHumidity: "56",
@@ -49,7 +49,7 @@ describe('API endpoint: /api/sensors', () => {
             });
     });
 
-    it('it should POST the sensor data with all required fields', (done) => {
+    it('POST request to /api/sensors should be successful with all required fields', (done) => {
         let sensor = {
             airTemp: "15.75",
             airHumidity: "84.5",
@@ -74,7 +74,7 @@ describe('API endpoint: /api/sensors', () => {
     /*
     ** Testing the sensor /DELETE route
     */
-    it('it should DELETE the sensor data', (done) => {
+    it('DELETE request to /api/sensors/:id should delete an existing sensor data', (done) => {
         let newSensorData = new Sensor({
             airTemp: "15.75",
             airHumidity: "84.5",

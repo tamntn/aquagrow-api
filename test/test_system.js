@@ -4,11 +4,11 @@ const User = mongoose.model('users');
 const Sensor = mongoose.model('sensors');
 
 // Dev Dependencies
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../app');
-let should = chai.should();
-let assert = chai.assert;
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const server = require('../app');
+const should = chai.should();
+const assert = chai.assert;
 
 chai.use(chaiHttp);
 
@@ -42,9 +42,23 @@ describe('API endpoint: /api/system', () => {
     })
 
     /*
+    ** Testing system association
+    */
+    it('A system should have relations with a user and sensor data', (done) => {
+        System.findOne({ _id: newSystem._id })
+            .populate('user', 'username') // Only fetch username from user
+            .populate('sensorData')
+            .then((system) => {
+                assert(system.user.username === 'test');
+                assert(system.sensorData[0].airTemp === '123');
+                done();
+            })
+    })
+
+    /*
     ** Testing the user /GET route
     */
-    it('it should GET system information that is associated to an user', (done) => {
+    it('GET request to /api/system/:username should return system information associated with an existing user', (done) => {
         chai.request(server)
             .get(`/api/system/${newUser.username}`)
             .end((err, response) => {
@@ -56,7 +70,7 @@ describe('API endpoint: /api/system', () => {
     /*
     ** Testing the user /POST route
     */
-    it('it should POST an new system', (done) => {
+    it('POST request to /api/system should create a new system and assign it to an existing user', (done) => {
         const joe = new User({
             username: 'joe',
             password: 'joe'
@@ -81,21 +95,10 @@ describe('API endpoint: /api/system', () => {
             })
     })
 
-    it('it should save relations between system, sensor and user', (done) => {
-        System.findOne({ _id: newSystem._id })
-            .populate('user', 'username') // Only fetch username from user
-            .populate('sensorData')
-            .then((system) => {
-                assert(system.user.username === 'test');
-                assert(system.sensorData[0].airTemp === '123');
-                done();
-            })
-    })
-
     /*
     ** Testing the user /PUT route
     */
-    it('it should UPDATE an existing system', (done) => {
+    it('PUT request to /api/system/:username should update an existing system', (done) => {
         chai.request(server)
             .put(`/api/system/${newUser.username}`)
             .send({

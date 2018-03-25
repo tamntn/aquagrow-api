@@ -1,12 +1,12 @@
-let mongoose = require('mongoose');
-let User = require('../models/User');
+const mongoose = require('mongoose');
+const User = require('../models/User');
 
 // Dev Dependencies
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../app');
-let should = chai.should();
-let assert = chai.assert;
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const server = require('../app');
+const should = chai.should();
+const assert = chai.assert;
 
 chai.use(chaiHttp);
 
@@ -14,7 +14,7 @@ describe('API authentication', () => {
     /*
     ** Testing the signin /POST route
     */
-    it('it should sign in an existing user', (done) => {
+    it('POST request to /api/signin should send back a token if successful', (done) => {
         const newUser = new User({
             username: "test",
             password: "test"
