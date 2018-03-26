@@ -22,7 +22,7 @@ describe('API endpoint: /api/sensors', () => {
     /*
     ** Testing the sensor /GET route
     */
-    it('GET request to /api/sensors should be unauthorized without a JWT', (done) => {
+    it('GET /api/sensors should be unauthorized without a JWT', (done) => {
         chai.request(server)
             .get('/api/sensors')
             .end((err, res) => {
@@ -34,7 +34,7 @@ describe('API endpoint: /api/sensors', () => {
     /*
     ** Testing the sensor /POST route
     */
-    it('POST request to /api/sensors should return an error without all required fields', (done) => {
+    it('POST /api/sensors should return an error without all required fields', (done) => {
         let sensor = {
             airTemp: "34",
             airHumidity: "56",
@@ -51,7 +51,7 @@ describe('API endpoint: /api/sensors', () => {
             });
     });
 
-    it('POST request to /api/sensors should be successful with all required fields', (done) => {
+    it('POST /api/sensors should be successful with all required fields', (done) => {
         let sensor = {
             airTemp: "15.75",
             airHumidity: "84.5",
@@ -73,7 +73,7 @@ describe('API endpoint: /api/sensors', () => {
             });
     });
 
-    it('POST request to /api/sensors/:systemId should save sensor data and push sensor data to a system', (done) => {
+    it('POST /api/sensors/:systemId should save sensor data and push sensor data to a system', (done) => {
         let newUser = new User({
             username: "test",
             password: "test"
@@ -109,7 +109,7 @@ describe('API endpoint: /api/sensors', () => {
     /*
     ** Testing the sensor /DELETE route
     */
-    it('DELETE request to /api/sensors/:id should delete an existing sensor data', (done) => {
+    it('DELETE /api/sensors/:id should delete an existing sensor data', (done) => {
         let newSensorData = new Sensor({
             airTemp: "15.75",
             airHumidity: "84.5",

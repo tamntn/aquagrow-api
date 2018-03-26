@@ -14,7 +14,7 @@ describe('API authentication', () => {
     /*
     ** Testing the signin /POST route
     */
-    it('POST request to /api/signin should send back a token if successful', (done) => {
+    it('POST /api/signin should send back a token if successful', (done) => {
         const newUser = new User({
             username: "test",
             password: "test"

@@ -58,7 +58,7 @@ describe('API endpoint: /api/system', () => {
     /*
     ** Testing the user /GET route
     */
-    it('GET request to /api/system/:username should return system information associated with an existing user', (done) => {
+    it('GET /api/system/:username should return system information associated with an existing user', (done) => {
         chai.request(server)
             .get(`/api/system/${newUser.username}`)
             .end((err, response) => {
@@ -70,7 +70,7 @@ describe('API endpoint: /api/system', () => {
     /*
     ** Testing the user /POST route
     */
-    it('POST request to /api/system should create a new system and assign it to an existing user', (done) => {
+    it('POST /api/system should create a new system and assign it to an existing user', (done) => {
         const joe = new User({
             username: 'joe',
             password: 'joe'
@@ -98,7 +98,7 @@ describe('API endpoint: /api/system', () => {
     /*
     ** Testing the user /PUT route
     */
-    it('PUT request to /api/system/:username should update an existing system', (done) => {
+    it('PUT /api/system/:username should update an existing system', (done) => {
         chai.request(server)
             .put(`/api/system/${newUser.username}`)
             .send({

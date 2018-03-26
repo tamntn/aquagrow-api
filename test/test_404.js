@@ -15,7 +15,7 @@ describe('API endpoint: /Invalid_path', () => {
     /*
     ** Testing any invalid route
     */
-    it('GET request to an invalid route should return status 404', (done) => {
+    it('GET /invalid route should return status 404', (done) => {
         chai.request(server)
             .get('/INVALID_PATH')
             .end((err, res) => {
