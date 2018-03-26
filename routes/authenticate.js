@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
-var bcrypt = require('bcryptjs');
-var User = require('../models/User');
-var jwt = require('jsonwebtoken');
-var databaseConfig = require('../config/db');
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcryptjs');
+const User = require('../models/User');
+const jwt = require('jsonwebtoken');
+const databaseConfig = require('../config/db');
 
 /*
 ** /POST Route
@@ -19,7 +19,7 @@ router.post('/api/signin', (req, res) => {
             } else {
                 if (bcrypt.compareSync(req.body.password, user.password)) {
                     // if user is found and password is right create a token
-                    var token = jwt.sign(user.toJSON(), databaseConfig.secret);
+                    const token = jwt.sign(user.toJSON(), databaseConfig.secret);
                     res.send({
                         message: "User authentication successful",
                         token: "JWT " + token

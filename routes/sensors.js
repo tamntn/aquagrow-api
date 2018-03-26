@@ -1,12 +1,12 @@
-var bodyParser = require('body-parser');
-var express = require('express');
-var router = express.Router();
-var _ = require('lodash');
-var moment = require('moment');
-var passport = require('passport');
-var jwt = require('jsonwebtoken');
-var Sensor = require('../models/Sensor');
-var System = require('../models/System');
+const bodyParser = require('body-parser');
+const express = require('express');
+const router = express.Router();
+const _ = require('lodash');
+const moment = require('moment');
+const passport = require('passport');
+const jwt = require('jsonwebtoken');
+const Sensor = require('../models/Sensor');
+const System = require('../models/System');
 
 // Convert incoming data to Object
 // Use in case incoming data is a string of format 'key=value&key=value'
