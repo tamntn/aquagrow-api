@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var ObjectId = mongoose.Schema.Types.ObjectId;
 
 // Creating a Schema for users
-const userSchema = new Schema({
+const UserSchema = new Schema({
     username: {
         type: String,
         unique: true,
@@ -18,7 +18,7 @@ const userSchema = new Schema({
 });
 
 // Hash password 'before' save
-userSchema.pre('save', function (next) {
+UserSchema.pre('save', function (next) {
     const user = this;
     if (this.isModified('password') || this.isNew) {
         user.password = bcrypt.hashSync(user.password, salt);
@@ -28,6 +28,14 @@ userSchema.pre('save', function (next) {
     }
 })
 
-const User = mongoose.model('users', userSchema);
+// Before removing an user, also remove the System associated with it
+UserSchema.pre('remove', function (next) {
+    const System = mongoose.model('system');
+
+    System.findOneAndRemove({ user: this._id })
+        .then(() => next())
+})
+
+const User = mongoose.model('users', UserSchema);
 
 module.exports = User;

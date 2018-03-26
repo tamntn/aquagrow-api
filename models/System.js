@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Sensor = require('./Sensor')
 const Schema = mongoose.Schema;
 
-const systemSchema = new Schema({
+const SystemSchema = new Schema({
     growLight: {
         type: Boolean,
         required: true,
@@ -28,6 +28,17 @@ const systemSchema = new Schema({
     }
 })
 
-const System = mongoose.model('system', systemSchema);
+// Before removing a system, also remove all the Sensors associated with it
+SystemSchema.pre('remove', function (next) {
+    const Sensor = mongoose.model('sensors');
+
+    // Using the ```in``` modifier
+    // Go through all of our Sensors, look at their ids,
+    // if the id is in this (the system's) list of sensorData, remove it
+    Sensor.remove({ _id: { $in: this.sensorData } })
+        .then(() => next());
+})
+
+const System = mongoose.model('system', SystemSchema);
 
 module.exports = System;

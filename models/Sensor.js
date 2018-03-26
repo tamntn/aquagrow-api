@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // Creating a Schema for sensor data
-const sensorSchema = new Schema({
+const SensorSchema = new Schema({
     time: Date,
     airTemp: {
         type: String,
@@ -34,6 +34,6 @@ const sensorSchema = new Schema({
     }
 });
 
-const Sensor = mongoose.model('sensors', sensorSchema);
+const Sensor = mongoose.model('sensors', SensorSchema);
 
 module.exports = Sensor;
