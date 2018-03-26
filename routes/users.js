@@ -92,7 +92,10 @@ router.get('/api/user/:username', (req, res) => {
 */
 router.delete('/api/user/:id', (req, res) => {
 	if (req.params.id) {
-		User.findOneAndRemove({ _id: req.params.id })
+		// We're using this method instead of FindOneAndRemove
+		// So we can reference user id during pre remove hook
+		User.findOne({ _id: req.params.id })
+			.then((user) => user.remove())		
 			.then((user) => {
 				res.send({
 					message: "DELETE user request successful",

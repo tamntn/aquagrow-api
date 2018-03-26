@@ -33,7 +33,12 @@ UserSchema.pre('remove', function (next) {
     const System = mongoose.model('system');
 
     System.findOneAndRemove({ user: this._id })
-        .then(() => next())
+        .then((system) => {
+            next()
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 })
 
 const User = mongoose.model('users', UserSchema);

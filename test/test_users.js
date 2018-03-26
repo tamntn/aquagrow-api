@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const User = require('../models/User');
+const User = mongoose.model('users');
+const System = mongoose.model('system');
 
 // Dev Dependencies
 const chai = require('chai');
@@ -14,7 +15,7 @@ describe('API endpoint: /api/users', () => {
     /*
     ** Testing the user /POST route
     */
-    it('POST request to /api/user should create a new user', (done) => {
+    it('POST /api/user should create a new user', (done) => {
         const newUserProps = {
             username: "test",
             password: "test"
@@ -37,7 +38,7 @@ describe('API endpoint: /api/users', () => {
     /*
     ** Testing the user /GET route
     */
-    it('GET request to /api/users should get a list of all users', (done) => {
+    it('GET /api/users should get a list of all users', (done) => {
         const newUser = new User({
             username: "test",
             password: "test"
@@ -57,7 +58,7 @@ describe('API endpoint: /api/users', () => {
             })
     })
 
-    it('GET request to /api/user/:username should get a user', (done) => {
+    it('GET /api/user/:username should get a user', (done) => {
         const newUser = new User({
             username: 'test',
             password: 'test'
@@ -79,7 +80,7 @@ describe('API endpoint: /api/users', () => {
     /*
     ** Testing the user /DELETE route
     */
-    it('DELETE request to /api/user/:username should delete an existing user', (done) => {
+    it('DELETE /api/user/:id should delete an existing user', (done) => {
         const newUser = new User({
             username: 'test',
             password: 'test'
@@ -97,5 +98,30 @@ describe('API endpoint: /api/users', () => {
                             })
                     })
             })
+    })
+
+    it('DELETE /api/user/:id should also delete the system associated with that user', (done) => {
+        const newUser = new User({
+            username: "test",
+            password: "test"
+        })
+
+        const newSystem = new System()
+        newSystem.user = newUser;
+
+        Promise.all([
+            newUser.save(),
+            newSystem.save()
+        ]).then(() => {
+            chai.request(server)
+                .delete(`/api/user/${newUser._id}`)
+                .end(() => {
+                    System.findOne({ _id: newSystem._id })
+                        .then((system) => {
+                            assert(system === null);
+                            done();
+                        })
+                })
+        })
     })
 })
