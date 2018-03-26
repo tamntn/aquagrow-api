@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const Sensor = require('../models/Sensor');
+const System = mongoose.model('system');
+const User = mongoose.model('users');
+const Sensor = mongoose.model('sensors');
 
 // Dev Dependencies
 const chai = require('chai');
@@ -70,6 +72,39 @@ describe('API endpoint: /api/sensors', () => {
                 done();
             });
     });
+
+    it('POST request to /api/sensors/:systemId should save sensor data and push sensor data to a system', (done) => {
+        let newUser = new User({
+            username: "test",
+            password: "test"
+        })
+
+        let newSystem = new System()
+        newSystem.user = newUser;
+
+        Promise.all([
+            newUser.save(),
+            newSystem.save()
+        ]).then(() => {
+            let sensor = {
+                airTemp: "15.75",
+                airHumidity: "84.5",
+                lightIntensity: "235",
+                waterTemp: "11.5"
+            }
+
+            chai.request(server)
+                .post(`/api/sensors/${newSystem._id}`)
+                .send(sensor)
+                .end(() => {
+                    System.findOne({ _id: newSystem._id })
+                        .then((system) => {
+                            assert(system.sensorData[0]._id === sensor._id);
+                            done();
+                        })
+                })
+        })
+    })
 
     /*
     ** Testing the sensor /DELETE route
