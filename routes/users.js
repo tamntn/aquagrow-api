@@ -15,7 +15,7 @@ router.post('/api/user', (req, res) => {
 		.then((user) => {
 			res.send({
 				message: "POST user request successful",
-				user: user
+				data: user
 			})
 		})
 		.catch((err) => {
@@ -34,7 +34,7 @@ router.get('/api/users', (req, res) => {
 		.then((users) => {
 			res.send({
 				message: "GET all users request successful",
-				users: users
+				data: users
 			})
 		})
 		.catch((err) => {
@@ -76,7 +76,7 @@ router.get('/api/user/:username', (req, res) => {
 			} else {
 				res.send({
 					message: "GET user by username request successful",
-					user: user
+					data: user
 				})
 			}
 		})
@@ -95,11 +95,11 @@ router.delete('/api/user/:id', (req, res) => {
 		// We're using this method instead of FindOneAndRemove
 		// So we can reference user id during pre remove hook
 		User.findOne({ _id: req.params.id })
-			.then((user) => user.remove())		
+			.then((user) => user.remove())
 			.then((user) => {
 				res.send({
 					message: "DELETE user request successful",
-					user: user
+					data: user
 				});
 			})
 			.catch((err) => {

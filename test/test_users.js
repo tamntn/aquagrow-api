@@ -51,8 +51,8 @@ describe('API endpoint: /api/users', () => {
                     .end((err, res) => {
                         res.should.have.status(200);
                         res.body.should.have.property("message").eql("GET all users request successful");
-                        res.body.users.should.have.lengthOf(1);
-                        res.body.users.should.not.have.property("password");
+                        res.body.data.should.have.lengthOf(1);
+                        res.body.data.should.not.have.property("password");
                         done();
                     })
             })
@@ -71,7 +71,7 @@ describe('API endpoint: /api/users', () => {
                     .end((err, res) => {
                         res.should.have.status(200);
                         res.body.should.have.property("message").eql("GET user by username request successful");
-                        res.body.user.should.have.property("username").eql("test");
+                        res.body.data.should.have.property("username").eql("test");
                         done();
                     })
             })
