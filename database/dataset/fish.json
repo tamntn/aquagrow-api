@@ -5,9 +5,9 @@
         "description": "Tilapia traces its origins back to the Nile River Basin in ancient Egypt. This species of fish is thought to be the oldest farmed fish on earth. Today, Tilapia is still an immensely popular fish to farm in aquaculture. It is also – quite possibly – the most popular aquaponics fish.",
         "feeding": "Herbivore",
         "diet": "Worms, Insects and Larvae, Algae, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 72,
-        "high": 86,
-        "harvest_range": "6-9",
+        "tempLow": 72,
+        "tempHigh": 86,
+        "harvestRange": "6-9",
         "picture": "http://www.seafoodwatch.org/-/m/78F9ED63D1124D3E993B1720DA1AC138.png?w=500&h=500"
     },
     {
@@ -16,9 +16,9 @@
         "description": "Looking for an aquaponics fish that thrives in cooler water? Trout may fit the bill. They thrive in temperatures ranging in the 50s and 60s, making them ideal for cool environments. This species of fish has a high food conversion ratio and grow quickly, although it may take up to 16 months to fully mature. In addition, trout are a desirable food source, loaded with protein and omega fatty acids.",
         "feeding": "Carnivore",
         "diet": "Worms, Insects and Larvae, Bait Fish, Shrimp, Frogs, Mice, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 56,
-        "high": 68,
-        "harvest_range": "12-16",
+        "tempLow": 56,
+        "tempHigh": 68,
+        "harvestRange": "12-16",
         "picture": "http://www.stickpng.com/assets/images/580b57fbd9996e24bc43bbf9.png"
     },
     {
@@ -27,9 +27,9 @@
         "description": "Silver, Yellow, and Jade varieties of perch are popular aquaponics fish. Because they are adaptable to various conditions, perch make a good starter fish for beginners. Perch typically thrive in water temperatures ranging in the 70’s. However, they are able to withstand colder water down to the 50’s.",
         "feeding": "Carnivore",
         "diet": "Worms, Insects and Larvae, Bait Fish, Shrimp, Frogs, Mice, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 70,
-        "high": 82,
-        "harvest_range": "9-16",
+        "tempLow": 70,
+        "tempHigh": 82,
+        "harvestRange": "9-16",
         "picture": "https://www.ldoceonline.com/media/english/illustration/perch.jpg"
     },
     {
@@ -38,9 +38,9 @@
         "description": "Catfish are a popular bottom-feeding aquaponics fish. They vary in size and are often commercially farmed for their flavor and high vitamin D content. Another advantage to choosing catfish is their high food conversion ratio, meaning they convert their food to body mass quickly.",
         "feeding": "Carnivore",
         "diet": "Worms, Insects and Larvae, Bait Fish, Shrimp, Frogs, Mice, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 78,
-        "high": 86,
-        "harvest_range": "5-10",
+        "tempLow": 78,
+        "tempHigh": 86,
+        "harvestRange": "5-10",
         "picture": "http://www.ndow.org/uploadedImages/ndoworg/Content/public_images/Taxonomy_Images/Bullhead.jpg"
     },
     {
@@ -49,9 +49,9 @@
         "description": "Barramundi is one of the most popular fish raised in aquaculture, especially in Australia. They also make a great aquaponics fish and can be kept in both fresh and saltwater systems. As an edible aquaponics fish, barramundi have flaky white flesh and are regarded as a good species for eating.",
         "feeding": "Carnivore",
         "diet": "Worms, Insects and Larvae, Bait Fish, Shrimp, Frogs, Mice, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 78,
-        "high": 83,
-        "harvest_range": "12-12",
+        "tempLow": 78,
+        "tempHigh": 83,
+        "harvestRange": "12-12",
         "picture": "http://www.sealandcompany.com/wp-content/uploads/2015/07/Barramundi.png"
     },
     {
@@ -60,9 +60,9 @@
         "description": "Largemouth, smallmouth, and striped bass are another top aquaponics fish.  However, this species is less adaptable to unfavorable conditions compared to others. Conditions must be closely monitored to ensure pristine water, and proper oxygen and pH levels.  In addition, bass will not tolerate bright light or a poor feeding regime. Another downside is the long wait period to mature. Largemouth bass can take up to 18 months to reach its full size. Striped bass typically mature faster.",
         "feeding": "Carnivore",
         "diet": "Worms, Insects and Larvae, Bait Fish, Shrimp, Frogs, Mice, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 75,
-        "high": 85,
-        "harvest_range": "12-18",
+        "tempLow": 75,
+        "tempHigh": 85,
+        "harvestRange": "12-18",
         "picture": "https://www.displayfakefoods.com/store/pc/catalog/5781-lg.jpg"
     },
     {
@@ -71,9 +71,9 @@
         "description": "While not considered a fish per se, crustaceans offer aquaponics hobbyist another choice to add to their system. And it doesn’t have to be a matter of either/or. Crustaceans – such as freshwater prawn, crayfish, mussels, oysters, and even lobsters – can either be added to aquaponics system alongside fish or within their own separate tank. They like eating dead organic plant matter at the bottom of the aquarium, so feeding crustaceans is a simple task. They also help to keep aquariums clean.",
         "feeding": "Omnivore",
         "diet": "Decaying Plant and Organic Matter",
-        "low": 82,
-        "high": 88,
-        "harvest_range": "6-12",
+        "tempLow": 82,
+        "tempHigh": 88,
+        "harvestRange": "6-12",
         "picture": "http://www.machbazarbd.com/wp-content/uploads/2015/12/golda-prawn.jpg"
     },
     {
@@ -82,9 +82,9 @@
         "description": "While not considered a fish per se, crustaceans offer aquaponics hobbyist another choice to add to their system. And it doesn’t have to be a matter of either/or. Crustaceans – such as freshwater prawn, crayfish, mussels, oysters, and even lobsters – can either be added to aquaponics system alongside fish or within their own separate tank. They like eating dead organic plant matter at the bottom of the aquarium, so feeding crustaceans is a simple task. They also help to keep aquariums clean.",
         "feeding": "Carnivore",
         "diet": "Decaying Plant and Organic Matter",
-        "low": 71,
-        "high": 76,
-        "harvest_range": "24-24",
+        "tempLow": 71,
+        "tempHigh": 76,
+        "harvestRange": "24-24",
         "picture": "http://www.thefishsociety.co.uk/binary_data/22027_adobestock_43076766.jpeg"
     },
     {
@@ -92,10 +92,10 @@
         "type": "Edible",
         "description": "While not considered a fish per se, crustaceans offer aquaponics hobbyist another choice to add to their system. And it doesn’t have to be a matter of either/or. Crustaceans – such as freshwater prawn, crayfish, mussels, oysters, and even lobsters – can either be added to aquaponics system alongside fish or within their own separate tank. They like eating dead organic plant matter at the bottom of the aquarium, so feeding crustaceans is a simple task. They also help to keep aquariums clean.",
         "feeding": "Filter-Feeder",
-        "diet": "",
-        "low": 75,
-        "high": 79,
-        "harvest_range": "24-24",
+        "diet": "N/A",
+        "tempLow": 75,
+        "tempHigh": 79,
+        "harvestRange": "24-24",
         "picture": "http://seacoreseafood.com/image.php?width=326&image=/pictures/product_tbn_fOZSLEYoEz.png"
     },
     {
@@ -104,9 +104,9 @@
         "description": "One of the most popular ornamental fish is Koi. They are often found in decorative ponds and widely revered in Asian culture. Like goldfish, koi produce a lot of waste matter and are easy to find at pet stores. This makes koi a popular aquaponics fish.",
         "feeding": "Omnivore",
         "diet": "Worms, Insects and Larvae, Algae, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 65,
-        "high": 75,
-        "harvest_range": "",
+        "tempLow": 65,
+        "tempHigh": 75,
+        "harvestRange": "",
         "picture": "http://koismart.com/wp-content/uploads/2016/02/MobileDevicesv1.png"
     },
     {
@@ -115,9 +115,9 @@
         "description": "Goldfish are one of the earliest species of fish to be domesticated and among the most popular fish used in aquaponics today. They are attractive in appearance, and are readily available at local pet shops. Generally speaking, these miniaturized carp species are hardy and adaptable to various water conditions. They prefer a temperature in the 60s-70s degree range.  Goldfish are especially well-suited for smaller aquaponics systems, but can thrive in an aquaponics system of any size.",
         "feeding": "Herbivore",
         "diet": "Worms, Insects and Larvae, Algae, Commercial Feed (such as Purina AquaMax Grower 400)",
-        "low": 68,
-        "high": 75,
-        "harvest_range": "",
+        "tempLow": 68,
+        "tempHigh": 75,
+        "harvestRange": "",
         "picture": "http://www.playcast.ru/uploads/2016/01/10/16746217.gif"
     }
 ]
