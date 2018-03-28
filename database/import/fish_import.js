@@ -3,11 +3,12 @@ const fs = require('fs');
 const databaseConfig = require('../../config/db');
 const Fish = require('../../models/Fish');
 
+// Mongoose connection setup
 mongoose.Promise = global.Promise;
 mongoose.connect(databaseConfig.devURI);
 
 // Read Fish data file
-// Remove all current Fish documents in the database
+// Clear all current Fish documents in the database
 // Insert all new fish data into the database
 fs.readFile('../dataset/fish.json', function (err, data) {
     data = JSON.parse(data);
