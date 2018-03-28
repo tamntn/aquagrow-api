@@ -19,6 +19,7 @@ var system = require('./routes/system');
 var sensors = require('./routes/sensors');
 var authenticate = require('./routes/authenticate');
 var fish = require('./routes/fish');
+var zone = require('./routes/zone');
 
 var app = express();
 
@@ -55,6 +56,7 @@ app.use('/', system);
 app.use('/', sensors);
 app.use('/', users);
 app.use('/', fish);
+app.use('/', zone);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
