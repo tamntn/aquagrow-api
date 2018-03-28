@@ -1,7 +1,9 @@
 import csv
+import json
+import pprint
 
-original_file = "../dataset/phm_us_zipcode.csv"
-output_file = "../dataset/zipcode_zone.csv"
+zone_csv = "../dataset/zone.csv"
+zone_json = "../dataset/zone.json"
 
 zones = {
     '1A': '-60 to -55',
@@ -28,21 +30,39 @@ zones = {
     '11B': '45 to 50',
 }
 
-with open(output_file, 'wb') as output:
-    writer = csv.writer(output)
-    headerRow = ['zipcode', 'zone', 'range']
-    writer.writerow(headerRow)
-    with open(original_file, 'rb') as input:
+zones_general = {
+    '1': '-60 to -50',
+    '2': '-50 to -40',
+    '3': '-40 to -30',
+    '4': '-30 to -20',
+    '5': '-20 to -10',
+    '6': '-10 to 0',
+    '7': '0 to 10',
+    '8': '10 to 20',
+    '9': '20 to 30',
+    '10': '30 to 40',
+    '11': '40 to 50',
+}
+
+with open(zone_json, 'wb') as output:
+    zone_dict = []
+    with open(zone_csv, 'rb') as input:
         reader = csv.reader(input)
         header = reader.next()
         rows = [row for row in reader if row]
-        print len(rows)
         for row in rows:
             zipcode = row[0]
             zone = row[1]
             range = row[2]
-            output_row = [zipcode, zone, range]
-            writer.writerow(output_row)
-            
-        input.close()
-    output.close()
+            if not any(item['zone'] == zone for item in zone_dict):
+                zone_dict.append({
+                    'zone': zone,
+                    'range': range,
+                    'zipcodes': [zipcode]
+                })
+            else:
+                for item in zone_dict:
+                    if item['zone'] == zone:
+                        item['zipcodes'].append(zipcode)
+
+    json.dump(zone_dict, output)
