@@ -1,8 +1,8 @@
 import csv
 
 ph_raw_text_file = '../dataset/pH_level_raw.txt'
-ph_clean_text_file = '../dataset/ph_level_clean.txt'
-ph_clean_csv_file = '../dataset/ph_level_clean.csv'
+ph_clean_text_file = '../dataset/pH_level_clean.txt'
+ph_clean_csv_file = '../dataset/pH_level_clean.csv'
 
 with open(ph_clean_text_file, 'wb') as clean_text_file:
     with open(ph_raw_text_file, 'rb') as raw_text_file:
