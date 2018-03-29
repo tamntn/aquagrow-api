@@ -1,24 +1,7 @@
 import csv
 
-ph_raw_text_file = '../dataset/pH_level_raw.txt'
-ph_clean_text_file = '../dataset/pH_level_clean.txt'
-ph_clean_csv_file = '../dataset/pH_level_clean.csv'
-
-with open(ph_clean_text_file, 'wb') as clean_text_file:
-    with open(ph_raw_text_file, 'rb') as raw_text_file:
-        count = 1
-        for line in raw_text_file.readlines():
-            # If line number is odd, edit the plant name
-            if count % 2 == 1:
-                line = line.strip().title()
-            # If line number if even, edit the pH level
-            elif count % 2 == 0:
-                line = line.replace(',', '.').replace(' ', '').strip()
-            # Increment line number
-            count += 1
-            # Write processed line to clean file
-            clean_text_file.write(line + '\n')
-
+ph_clean_text_file = '../dataset/pH_level.txt'
+ph_clean_csv_file = '../dataset/pH_level.csv'
 
 with open(ph_clean_csv_file, 'wb') as clean_csv_file:
     writer = csv.writer(clean_csv_file)
