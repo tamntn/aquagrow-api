@@ -24,4 +24,7 @@ npm run start-dev
 * [Chai](http://chaijs.com)
 * [Travis-CI](https://docs.travis-ci.com)
 * [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
+* [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
 * [Passport-jwt](https://github.com/themikenicholson/passport-jwt)
+* [Geocoding API](https://developers.google.com/maps/documentation/geocoding/start)
+* [NodeJS Client Library for Google Maps API](https://github.com/googlemaps/google-maps-services-js)
