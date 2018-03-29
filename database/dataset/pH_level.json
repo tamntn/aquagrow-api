@@ -1,0 +1,1710 @@
+[
+    {
+        "pH": "5.0-6.5",
+        "name": "Apple"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Apricot"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Avocado"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Banana"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Blackberry"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Blueberry"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Cantaloupe"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Cherry"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Cranberry"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Current: Black"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Current: Red"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Current: White"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Damson"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Gooseberry"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Grapevine"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Grapefruit"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Hazelnut"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Huckleberry"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Lemon"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Lychee"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Mango"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Melon"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Mulberry"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Nectarine"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Peach"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Pear"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Pineapple"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Plum"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Pomegranate"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Quince"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Raspberry"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Rhubarb"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Strawberry"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Watermelon"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Artichoke"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Asparagus"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Basil"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Bean"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Beetroot"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Broccoli"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Brussels Sprouts"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Cabbage"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Calabrese"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Carrot"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Cauliflower"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Celery"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Chicory"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Chinese Cabbage"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Chives"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Corn"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Cress"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Courgettes"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Cucumber Fennel"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Garlic"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Ginger"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Horseradish Kale"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Kohlrabi"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Leek"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Lentil"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Lettuce"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Marjoram"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Marrow"
+    },
+    {
+        "pH": "7.0-8.0",
+        "name": "Millet Mint"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Mushroom"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Mustard"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Olive"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Onion"
+    },
+    {
+        "pH": "7.0-8.5",
+        "name": "Paprika"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Parsley"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Parsnip"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Pea"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Peanut"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Pecan"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Pepper"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Peppermint"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Pistachio"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Potato"
+    },
+    {
+        "pH": "5.5-6.0",
+        "name": "Potato - Sweet"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Pumpkin"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Radish"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Rosemary"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Sage"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Genista"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Shallot"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Geranium"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Sorghum"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Gloxinia"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Soybean"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Grape Ivy"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Spearmint"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Grape Hyacinth"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Spinach"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Grevillea"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Swede"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Gynura"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Thyme"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Hedera (Ivy)"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Tomato"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Heliotropium"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Turnip"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Hens And Chickens"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Water Cress"
+    },
+    {
+        "pH": "6.0-6.0",
+        "name": "Herringbone Plant"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Hibiscus Plant"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Abutilon"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Hoya"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Acorus"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Impatiens"
+    },
+    {
+        "pH": "5.0-5.5",
+        "name": "Aechmea"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Ivy Tree"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "African Violet"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Jacaranda"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Aglaonema"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Japanese Sedge"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Amarylis"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Jasminum"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Anthurium"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Jerusalem Cherry"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Aphelandra"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Jessamone"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Araucaria"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Kalanchoe"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Asparagus Fern"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Kangaroo Thorn"
+    },
+    {
+        "pH": "4.0-5.5",
+        "name": "Aspidistra"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Kangaroo Vine"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Azaela"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Lantana"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Baby'S Breath"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Laurus ( Bay Tree)"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Baby'S Tears"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Lemon Plant"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Begonia"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Mimosa"
+    },
+    {
+        "pH": "6.0-6.5",
+        "name": "Bird Of Paradise"
+    },
+    {
+        "pH": "5.0-5.5",
+        "name": "Mind Your Own Business"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Bishop'S Cap"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Monstera"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Black-Eyed Susan"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Myrtle"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Blood Leaf"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Never Never Plant"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Bottlebrush"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Nicodemia (Indoor Oak)"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Bougainvillea"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Norfolk Island Pine"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Boxwood"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Oleander"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Bromeliads"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Oplismenus"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Butterfly Flower"
+    },
+    {
+        "pH": "4.5-5.5",
+        "name": "Orchid"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Cacti"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Oxalis"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Calcaolaria"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Palms"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Caladium"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Pandanus"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Calla Lily"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Peacock Plant"
+    },
+    {
+        "pH": "4.5-5.5",
+        "name": "Camelia"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Pellionia"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Campanula"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Peperomia"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Capsicum"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Philodendron"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Cardinal Flower"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Pilea"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Castor Oil Plant"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Plumbago"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Cantury Plant"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Podacarpus"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Chinese Evergreen"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Pointsettia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Chinese Primrose"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Polyscias"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Christmas Cactus"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Pothos"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Cineraria"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Prayer Plant"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Clerodendrum"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Punica"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Clivia"
+    },
+    {
+        "pH": "4.5-7.0",
+        "name": "Sanserieria"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Cockscomb"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Saxifraga"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Coffee Plant"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Scindapsus"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Coleus"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Shrimp Plant"
+    },
+    {
+        "pH": "4.5-5.5",
+        "name": "Columnea"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Spanish Bayonet"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Coral Berry"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Spider Plant"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Crassula"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Succulents"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Creeping Fig"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Synogonium"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Croton"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Tolmiea"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Crown Of Thorns"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Tradescantia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Cuphea"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Umbrella Tree"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Cyclamen"
+    },
+    {
+        "pH": "4.0-5.0",
+        "name": "Venus Flytrap"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Cyperus"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Weeping Fig"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Dieffenbachia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Yucca"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Dipladenia"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Zebrina"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Dizgotheca"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Dracaena"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Easter Lily"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Abelia"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Elephant'S Ear"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Acacia"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Episcia"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Acanthus"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Euonymous"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Aconitum"
+    },
+    {
+        "pH": "5.0-5.5",
+        "name": "Ferns: Bird'S Nest"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Adonis"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Ageratum"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Ferns: Boston"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Ailanthus"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Ferns: Button"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Ajuga"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Ferns: Christmas"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Althea"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Ferns: Cloak"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Alyssum"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Ferns: Feather"
+    },
+    {
+        "pH": "6.0-6.5",
+        "name": "Amaranthus"
+    },
+    {
+        "pH": "7.0-8.0",
+        "name": "Ferns: Hart'S Tongue"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Anchusa"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Ferns: Holly"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Androsace"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Ferns: Maidenhair"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Anemone"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Ferns: Rabbits Foot"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Anthyllis"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Ferns: Spleenwort"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Arbutus"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Fig"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Arenaria"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Fittonia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Aristea"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Freesia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Armeria"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Gardenia"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Arnica"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Asperula"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Asphodoline"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Aster"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Aubrita"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Azalea"
+    },
+    {
+        "pH": "6.0-6.5",
+        "name": "Balloon Flower"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Bayberry"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Bergenia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Bleeding Heart"
+    },
+    {
+        "pH": "6.0-7.6",
+        "name": "Bluebell"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Broom"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Buddleia"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Buphthalum"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Butterfly Bush"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Calendula"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Camassia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Candytuft"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Canna"
+    },
+    {
+        "pH": "7.0-7.5",
+        "name": "Canterbury Bells"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Cardinal Flower"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Carnation"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Catalpa"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Celosia"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Centaurea"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Cerastium"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Chrysanthemum"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Cissus"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Cistus"
+    },
+    {
+        "pH": "6.0-6.5",
+        "name": "Clarkia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Clianthus"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Clematis"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Colchicum"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Columbine"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Convolvulus"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Coreopsis"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Coronilla"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Corydalis"
+    },
+    {
+        "pH": "5.0-8.0",
+        "name": "Cosmos"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Cottoneaster"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Crab Apple"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Crocus"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Cynoglossum"
+    },
+    {
+        "pH": "6.0-6.5",
+        "name": "Daffodil"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Dahlia"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Day Lily"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Delphinium"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Deutzia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Dianthus"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Dogwood"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Edelweiss"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Elaeagnus"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Enkianthus"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Erica"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Euphorbia"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Everlastings"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Firethorn"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Forget-Me-Nots"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Forsythia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Foxglove"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Fritillaria"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Fuchsia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Gaillardia"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Gazania"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Gentiana"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Geum"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Gladioili"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Globularia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Godetia"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Golden Rod"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Gypsophilia"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Hawthorn"
+    },
+    {
+        "pH": "4.0-6.0",
+        "name": "Heather"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Helianthus"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Helleborus"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Holly"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Hollyhock"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Honeysuckle"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Hyacinth"
+    },
+    {
+        "pH": "4.0-5.0",
+        "name": "Hydrangea (Blue)"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Hydrangea (Pink)"
+    },
+    {
+        "pH": "6.5-8.0",
+        "name": "Hydrangea (White)"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Hypericum"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Iris"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Ivy"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Juniper"
+    },
+    {
+        "pH": "4.5-5.0",
+        "name": "Kalmia"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Kerria"
+    },
+    {
+        "pH": "60-70",
+        "name": "Laburnum"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Laurel"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Lavender"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Liatris"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Ligustrum"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Lilac"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Lily Of The Valley"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Lithospermum"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Lobelia"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Lupinus"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Magnolia"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Mahonia"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Marigold"
+    },
+    {
+        "pH": "4.0-5.0",
+        "name": "Molinia"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Moraea"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Morning Glory"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Moss"
+    },
+    {
+        "pH": "3.5-5.0",
+        "name": "Moss, Sphagnum"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Myosotis"
+    },
+    {
+        "pH": "6.0-8.5",
+        "name": "Narcissus"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Nasturtium"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Nicotiana"
+    },
+    {
+        "pH": "5.0-8.0",
+        "name": "Pachysandra"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Paeonia"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Pansy"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Passion Flower"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Pasque Flower"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Paulownia"
+    },
+    {
+        "pH": "5.507.0",
+        "name": "Penstemon"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Periwinkle"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Petunia"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Pinks"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Polygonum"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Polyanthus"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Poppy"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Portulaca"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Primrose"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Primula"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Privet"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Prunella"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Prunus"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Pyrethrum"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Red Hot Poker"
+    },
+    {
+        "pH": "4.5-6.0",
+        "name": "Rhododendren"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Roses: Hybrid Tea"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Roses: Climbing"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Roses: Rambling"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Salvia"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Scabiosa"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Sedum"
+    },
+    {
+        "pH": "5.5-7.0",
+        "name": "Snapdragon"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Snowdrop"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Soapwort"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Speedwell"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Spiraea"
+    },
+    {
+        "pH": "4.0-5.0",
+        "name": "Spruce"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Stock"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Stonecrop"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Sumack"
+    },
+    {
+        "pH": "5.0-7.0",
+        "name": "Sunflower"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Sweet Pea"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Sweet William"
+    },
+    {
+        "pH": "6.5-8.0",
+        "name": "Tamarix"
+    },
+    {
+        "pH": "5.0-6.5",
+        "name": "Trillium"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Tulip"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Vibernum"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Viola"
+    },
+    {
+        "pH": "5.0-7.5",
+        "name": "Virginia Creeper"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Wallflower"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Water Lily"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Weigelia"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Wistaria"
+    },
+    {
+        "pH": "5.5-7.5",
+        "name": "Zinnia"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "Bahat"
+    },
+    {
+        "pH": "5.5-6.5",
+        "name": "Bent"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Bermuda"
+    },
+    {
+        "pH": "4.5-6.4",
+        "name": "Canada Blue"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Clover"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Kentucky Blue"
+    },
+    {
+        "pH": "6.0-7.5",
+        "name": "Meadow"
+    },
+    {
+        "pH": "6.0-8.0",
+        "name": "Pampas"
+    },
+    {
+        "pH": "6.0-6.5",
+        "name": "Red Top"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Rye"
+    },
+    {
+        "pH": "6.5-7.5",
+        "name": "St. Augustine"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Tall Fescue"
+    },
+    {
+        "pH": "5.0-6.0",
+        "name": "Velvet Bent"
+    },
+    {
+        "pH": "6.0-7.0",
+        "name": "Zoysia"
+    }
+]

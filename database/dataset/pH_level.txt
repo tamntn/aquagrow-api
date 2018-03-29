@@ -32,8 +32,6 @@ Grapefruit
 6.0-7.5
 Hazelnut
 6.0-7.0
-НОР
-6.0-7.5
 Huckleberry
 4.0-6.0
 Lemon
@@ -194,7 +192,7 @@ Thyme
 5.5-7.0
 Hedera (Ivy)
 6.0-8.0
-ΤΟΜΑΤΟ
+Tomato
 5.5-7.5
 Heliotropium
 5.0-6.0
@@ -304,7 +302,7 @@ Butterfly Flower
 6.0-7.5
 Orchid
 4.5-5.5
-САСТІ
+Cacti
 4.5-6.0
 Oxalis
 6.0-8.0
@@ -826,7 +824,7 @@ Wistaria
 6.0-8.0
 Zinnia
 5.5-7.5
-ВАНАТ
+Bahat
 6.5-7.5
 Bent
 5.5-6.5
