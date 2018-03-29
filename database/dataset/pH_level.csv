@@ -8,20 +8,19 @@ Blueberry,4.0-6.0
 Cantaloupe,6.5-7.5
 Cherry,6.0-7.5
 Cranberry,5.5-6.5
-Current: Black,6.0-8.0
-Current: Red,5.5-7.0
-Current: White,6.0-8.0
+Currant: Black,6.0-8.0
+Currant: Red,5.5-7.0
+Currant: White,6.0-8.0
 Damson,6.0-7.5
 Gooseberry,5.0-6.5
 Grapevine,6.0-7.0
 Grapefruit,6.0-7.5
 Hazelnut,6.0-7.0
-НОР,6.0-7.5
 Huckleberry,4.0-6.0
 Lemon,6.0-7.0
 Lychee,6.0-7.0
 Mango,5.0-6.0
-Melon,5.5-6.5
+Melons,5.5-6.5
 Mulberry,6.0-7.5
 Nectarine,6.0-7.5
 Peach,6.0-7.5
@@ -33,17 +32,17 @@ Quince,6.0-7.5
 Raspberry,5.0-7.5
 Rhubarb,5.5-7.0
 Strawberry,5.0-7.5
-Watermelon,5.5-6.5
+Watermelons,5.5-6.5
 Artichoke,6.5-7.5
 Asparagus,6.0-8.0
 Basil,5.5-6.5
-Bean,6.0-7.5
+Beans,6.0-7.5
 Beetroot,6.0-7.5
 Broccoli,6.0-7.0
-Brussels Sprouts,6.0-7.5
+Brussel Sprouts,6.0-7.5
 Cabbage,6.0-7.5
 Calabrese,6.5-7.5
-Carrot,5.5-7.0
+Carrots,5.5-7.0
 Cauliflower,5.5-7.5
 Celery,6.0-7.0
 Chicory,5.0-6.5
@@ -52,12 +51,13 @@ Chives,6.0-7.0
 Corn,5.5-7.0
 Cress,6.0-7.0
 Courgettes,5.5-7.0
-Cucumber Fennel,5.0-6.0
+Cucumber,5.5-7.0
+Fennel,5.0-6.0
 Garlic,5.5-7.5
 Ginger,6.0-8.0
-Horseradish Kale,6.0-7.5
+Kale,6.0-7.5
 Kohlrabi,6.0-7.5
-Leek,6.0-8.0
+Leeks,6.0-8.0
 Lentil,5.5-7.0
 Lettuce,6.0-7.0
 Marjoram,6.0-8.0
@@ -66,24 +66,24 @@ Millet Mint,7.0-8.0
 Mushroom,6.5-7.5
 Mustard,6.0-7.5
 Olive,5.5-6.5
-Onion,6.0-7.0
+Onions,6.0-7.0
 Paprika,7.0-8.5
 Parsley,5.0-7.0
 Parsnip,5.5-7.5
-Pea,6.0-7.5
-Peanut,5.0-6.5
+Peas,6.0-7.5
+Peanuts,5.0-6.5
 Pecan,4.0-6.0
-Pepper,5.5-7.0
+Peppers,5.5-7.0
 Peppermint,6.0-7.5
 Pistachio,5.0-6.0
-Potato,4.5-6.0
-Potato - Sweet,5.5-6.0
+Potatoes,4.5-6.0
+Sweet Potato,5.5-6.0
 Pumpkin,5.5-7.5
 Radish,6.0-7.0
 Rosemary,5.0-6.0
 Sage,5.5-6.5
 Genista,6.5-7.5
-Shallot,5.5-7.0
+Shallots,5.5-7.0
 Geranium,6.0-8.0
 Sorghum,5.5-7.5
 Gloxinia,5.5-6.5
@@ -97,9 +97,9 @@ Swede,5.0-7.0
 Gynura,5.5-6.5
 Thyme,5.5-7.0
 Hedera (Ivy),6.0-8.0
-ΤΟΜΑΤΟ,5.5-7.5
+Tomatoes,5.5-7.5
 Heliotropium,5.0-6.0
-Turnip,5.5-7.0
+Turnips,5.5-7.0
 Hens And Chickens,6.0-7.0
 Water Cress,6.0-8.0
 Herringbone Plant,6.0-6.0
@@ -152,7 +152,7 @@ Bromeliads,5.0-7.5
 Oplismenus,5.0-6.0
 Butterfly Flower,6.0-7.5
 Orchid,4.5-5.5
-САСТІ,4.5-6.0
+Cacti,4.5-6.0
 Oxalis,6.0-8.0
 Calcaolaria,6.0-7.0
 Palms,6.0-7.5
@@ -399,7 +399,7 @@ Spruce,4.0-5.0
 Stock,6.0-7.5
 Stonecrop,6.5-7.5
 Sumack,5.0-6.5
-Sunflower,5.0-7.0
+Sunflowers,5.0-7.0
 Sweet Pea,6.0-7.5
 Sweet William,6.0-7.5
 Tamarix,6.5-8.0
@@ -413,7 +413,7 @@ Water Lily,5.5-6.5
 Weigelia,6.0-7.5
 Wistaria,6.0-8.0
 Zinnia,5.5-7.5
-ВАНАТ,6.5-7.5
+Bahat,6.5-7.5
 Bent,5.5-6.5
 Bermuda,6.0-7.0
 Canada Blue,4.5-6.4
@@ -427,3 +427,23 @@ St. Augustine,6.5-7.5
 Tall Fescue,6.0-7.0
 Velvet Bent,5.0-6.0
 Zoysia,6.0-7.0
+Bee Balm,6.0-6.7
+Borage,4.5-8.5
+Catnip,6.1-7.8
+Chervil,5.5-7.0
+Cilantro,6.5-7.5
+Dill,5.5-6.5
+Lemon Balm,6.0-7.5
+Lemon Grass,5.0-8.0
+Oregano,6.0-8.0
+Rue,6.6-8.5
+Tarragon,6.5-7.5
+Collard,6.5-6.8
+Okra,6.5-7.0
+Squash,5.5-6.8
+Tomatillo,6.0-7.0
+Grapes,3.5-4.5
+Kiwi,3.1-4.0
+Cowpea,5.5-6.5
+Milkweed,5.8-7.2
+Roses,6.0-7.0

@@ -23,7 +23,7 @@ with open(ph_clean_json_file, 'wb') as clean_json_file:
         lines = clean_text_file.readlines()
         for i in range(0, len(lines), 2):
             name = lines[i].strip()
-            level = lines[i + 1].strip()
+            level = lines[i + 1].strip().split('-')
             pH.append({
                 "name": name,
                 "pH": level
