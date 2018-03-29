@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 // Creating a Schema for sensor data
 const SensorSchema = new Schema({
-    time: Date,
+    timestamp: Date,
     airTemp: {
         type: String,
         required: true

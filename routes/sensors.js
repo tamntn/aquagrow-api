@@ -43,7 +43,7 @@ router.get('/api/sensors', passport.authenticate('jwt', { session: false }), fun
 router.post('/api/sensors', function (req, res) {
     // Create a new instance of the Sensor Schema
     const newSensor = new Sensor({
-        time: moment().format(),
+        timestamp: moment().format(),
         airTemp: req.body.airTemp,
         airHumidity: req.body.airHumidity,
         lightIntensity: req.body.lightIntensity,
@@ -70,7 +70,7 @@ router.post('/api/sensors', function (req, res) {
 router.post('/api/sensors/:systemId', function (req, res) {
     // Create a new instance of the Sensor Schema
     const newSensor = new Sensor({
-        time: moment().format(),
+        timestamp: moment().format(),
         airTemp: req.body.airTemp,
         airHumidity: req.body.airHumidity,
         lightIntensity: req.body.lightIntensity,
