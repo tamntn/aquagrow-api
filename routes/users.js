@@ -1,4 +1,5 @@
 const express = require('express');
+const moment = require('moment');
 const router = express.Router();
 const User = require('../models/User');
 
@@ -8,7 +9,10 @@ const User = require('../models/User');
 router.post('/api/user', (req, res) => {
 	const newUser = new User({
 		username: req.body.username,
-		password: req.body.password
+		password: req.body.password,
+		firstName: req.body.firstName,
+		lastName: req.body.lastName,
+		joined: moment().format()
 	})
 
 	newUser.save()

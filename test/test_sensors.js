@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
 const System = mongoose.model('system');
 const User = mongoose.model('users');
 const Sensor = mongoose.model('sensors');
@@ -76,7 +77,10 @@ describe('API endpoint: /api/sensors', () => {
     it('POST /api/sensors/:systemId should save sensor data and push sensor data to a system', (done) => {
         let newUser = new User({
             username: "test",
-            password: "test"
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         })
 
         let newSystem = new System()

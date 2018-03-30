@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
 const User = mongoose.model('users');
 const System = mongoose.model('system');
 
@@ -18,7 +19,10 @@ describe('API endpoint: /api/users', () => {
     it('POST /api/user should create a new user', (done) => {
         const newUserProps = {
             username: "test",
-            password: "test"
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         }
 
         User.count()
@@ -41,7 +45,10 @@ describe('API endpoint: /api/users', () => {
     it('GET /api/users should get a list of all users', (done) => {
         const newUser = new User({
             username: "test",
-            password: "test"
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         });
 
         newUser.save()
@@ -60,8 +67,11 @@ describe('API endpoint: /api/users', () => {
 
     it('GET /api/user/:username should get a user', (done) => {
         const newUser = new User({
-            username: 'test',
-            password: 'test'
+            username: "test",
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         })
 
         newUser.save()
@@ -82,8 +92,11 @@ describe('API endpoint: /api/users', () => {
     */
     it('DELETE /api/user/:id should delete an existing user', (done) => {
         const newUser = new User({
-            username: 'test',
-            password: 'test'
+            username: "test",
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         })
 
         newUser.save()
@@ -103,7 +116,10 @@ describe('API endpoint: /api/users', () => {
     it('DELETE /api/user/:id should also delete the system associated with that user', (done) => {
         const newUser = new User({
             username: "test",
-            password: "test"
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         })
 
         const newSystem = new System()

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
 const User = require('../models/User');
 
 // Dev Dependencies
@@ -17,7 +18,10 @@ describe('API authentication', () => {
     it('POST /api/signin should send back a token if successful', (done) => {
         const newUser = new User({
             username: "test",
-            password: "test"
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         })
 
         newUser.save()

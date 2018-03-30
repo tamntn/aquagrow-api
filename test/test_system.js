@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
 const System = mongoose.model('system');
 const User = mongoose.model('users');
 const Sensor = mongoose.model('sensors');
@@ -19,7 +20,10 @@ describe('API endpoint: /api/system', () => {
     beforeEach((done) => {
         newUser = new User({
             username: "test",
-            password: "test"
+            password: "test",
+            firstName: "test",
+            lastName: "test",
+            joined: moment().format()
         })
 
         newSystem = new System()
@@ -73,7 +77,10 @@ describe('API endpoint: /api/system', () => {
     it('POST /api/system should create a new system and assign it to an existing user', (done) => {
         const joe = new User({
             username: 'joe',
-            password: 'joe'
+            password: 'joe',
+            firstName: 'joe',
+            lastName: 'joe',
+            joined: moment().format()
         })
 
         // Save Joe and then create new system and assign it to Joe
