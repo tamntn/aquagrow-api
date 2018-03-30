@@ -32,9 +32,9 @@
 ## System ⏳
 ```javascript
 {
-    growLight: String,
-    waterPump: String,
-    heatingMat: String,
+    growLight: Boolean,
+    waterPump: Boolean,
+    heatingMat: Boolean,
     sensorData: [ObjectId.Sensor],
     user: ObjectId.User
 }
