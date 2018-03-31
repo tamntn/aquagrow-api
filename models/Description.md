@@ -25,7 +25,7 @@
     phone: String,
     system: ObjectId.System,
     portfolio: ObjectId.Portfolio,
-    notifications: [ObjectId.Notification],
+    notifications: [ObjectId.Notification]
 }
 ```
 
@@ -34,6 +34,8 @@
 {
     growLight: Boolean,
     waterPump: Boolean,
+    phPumpLow: Boolean,
+    phPumpHigh: Boolean,
     heatingMat: Boolean,
     sensorData: [ObjectId.Sensor],
     user: ObjectId.User

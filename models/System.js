@@ -13,6 +13,16 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    phPumpLow: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
+    phPumpHigh: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     heatingMat: {
         type: Boolean,
         required: true,
