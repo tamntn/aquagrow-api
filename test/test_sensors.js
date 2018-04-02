@@ -78,8 +78,7 @@ describe('API endpoint: /api/sensors', () => {
         let newUser = new User({
             username: "test",
             password: "test",
-            firstName: "test",
-            lastName: "test",
+            name: "test",
             joined: moment().format()
         })
 

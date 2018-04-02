@@ -10,8 +10,7 @@ router.post('/api/user', (req, res) => {
 	const newUser = new User({
 		username: req.body.username,
 		password: req.body.password,
-		firstName: req.body.firstName,
-		lastName: req.body.lastName,
+		name: req.body.name,
 		joined: moment().format()
 	})
 

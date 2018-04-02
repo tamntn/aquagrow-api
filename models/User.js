@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-var moment = require('moment');
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 var Schema = mongoose.Schema;
@@ -16,11 +15,7 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    firstName: {
-        type: String,
-        required: true
-    },
-    lastName: {
+    name: {
         type: String,
         required: true
     },
@@ -42,11 +37,9 @@ const UserSchema = new Schema({
 });
 
 // Hash password 'before' save
-// Also created joined timestamp
 UserSchema.pre('save', function (next) {
     const user = this;
-    user.joined = moment().format();
-    
+
     if (this.isModified('password') || this.isNew) {
         user.password = bcrypt.hashSync(user.password, salt);
         next();

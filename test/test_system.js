@@ -21,8 +21,7 @@ describe('API endpoint: /api/system', () => {
         newUser = new User({
             username: "test",
             password: "test",
-            firstName: "test",
-            lastName: "test",
+            name: "test",
             joined: moment().format()
         })
 
@@ -78,8 +77,7 @@ describe('API endpoint: /api/system', () => {
         const joe = new User({
             username: 'joe',
             password: 'joe',
-            firstName: 'joe',
-            lastName: 'joe',
+            name: 'joe',
             joined: moment().format()
         })
 

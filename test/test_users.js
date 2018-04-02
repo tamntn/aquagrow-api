@@ -20,8 +20,7 @@ describe('API endpoint: /api/users', () => {
         const newUserProps = {
             username: "test",
             password: "test",
-            firstName: "test",
-            lastName: "test",
+            name: "test",
             joined: moment().format()
         }
 
@@ -46,8 +45,7 @@ describe('API endpoint: /api/users', () => {
         const newUser = new User({
             username: "test",
             password: "test",
-            firstName: "test",
-            lastName: "test",
+            name: "test",
             joined: moment().format()
         });
 
@@ -69,8 +67,7 @@ describe('API endpoint: /api/users', () => {
         const newUser = new User({
             username: "test",
             password: "test",
-            firstName: "test",
-            lastName: "test",
+            name: "test",
             joined: moment().format()
         })
 
@@ -94,8 +91,7 @@ describe('API endpoint: /api/users', () => {
         const newUser = new User({
             username: "test",
             password: "test",
-            firstName: "test",
-            lastName: "test",
+            name: "test",
             joined: moment().format()
         })
 
@@ -117,8 +113,7 @@ describe('API endpoint: /api/users', () => {
         const newUser = new User({
             username: "test",
             password: "test",
-            firstName: "test",
-            lastName: "test",
+            name: "test",
             joined: moment().format()
         })
 
