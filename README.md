@@ -1,5 +1,5 @@
 # AquaGrow API
-[![Build Status](https://travis-ci.org/tamntn/sp-api.svg?branch=master)](https://travis-ci.org/tamntn/sp-api)
+[![Build Status](https://travis-ci.org/tamntn/aquagrow-api.svg?branch=master)](https://travis-ci.org/tamntn/aquagrow-api)
 
 ## To run in development environment
 ```
