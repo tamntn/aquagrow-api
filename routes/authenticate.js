@@ -20,8 +20,12 @@ router.post('/api/signin', (req, res) => {
                 if (bcrypt.compareSync(req.body.password, user.password)) {
                     // if user is found and password is right create a token
                     const token = jwt.sign(user.toJSON(), databaseConfig.secret);
+                    // Remove password from user object before sending it back with the respond
+                    let returnUserData = Object.assign({}, user._doc);
+                    delete returnUserData['password'];
                     res.send({
                         message: "User authentication successful",
+                        user: returnUserData,
                         token: "JWT " + token
                     })
                 } else {
