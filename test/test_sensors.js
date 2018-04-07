@@ -82,7 +82,9 @@ describe('API endpoint: /api/sensors', () => {
             joined: moment().format()
         })
 
-        let newSystem = new System()
+        let newSystem = new System({
+            name: "test"
+        })
         newSystem.user = newUser;
 
         Promise.all([

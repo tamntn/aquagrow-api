@@ -3,6 +3,10 @@ const Sensor = require('./Sensor')
 const Schema = mongoose.Schema;
 
 const SystemSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+    },
     growLight: {
         type: Boolean,
         required: true,

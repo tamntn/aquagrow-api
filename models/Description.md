@@ -14,10 +14,9 @@
 ## User ⏳
 ```javascript
 {
-    firstName: String,
-    lastName: String,
     username: String,
     password: String,
+    name: String,    
     picture: String,
     joined: Date,
     zipCode: String,
@@ -32,6 +31,7 @@
 ## System ⏳
 ```javascript
 {
+    name: String,
     growLight: Boolean,
     waterPump: Boolean,
     phPumpLow: Boolean,

@@ -33,7 +33,9 @@ router.post('/api/system', function (req, res) {
     // Get username passed from request body
     User.findOne({ username: req.body.username })
         .then((user) => {
-            const newSystem = new System();
+            const newSystem = new System({
+                name: req.body.systemName
+            });
             newSystem.user = user;
 
             newSystem.save()

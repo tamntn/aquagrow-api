@@ -25,7 +25,9 @@ describe('API endpoint: /api/system', () => {
             joined: moment().format()
         })
 
-        newSystem = new System()
+        newSystem = new System({
+            name: "test"
+        })
 
         newSensorData = new Sensor({
             airTemp: '123',
@@ -88,7 +90,7 @@ describe('API endpoint: /api/system', () => {
                     .then(count => {
                         chai.request(server)
                             .post('/api/system')
-                            .send({ username: joe.username })
+                            .send({ username: joe.username, systemName: "test" })
                             .end((err, response) => {
                                 assert(response.body.data.user.username === 'joe')
                                 System.count().then(newCount => {

@@ -117,7 +117,9 @@ describe('API endpoint: /api/users', () => {
             joined: moment().format()
         })
 
-        const newSystem = new System()
+        const newSystem = new System({
+            name: "test"
+        })
         newSystem.user = newUser;
 
         Promise.all([
