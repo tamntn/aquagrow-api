@@ -29,22 +29,44 @@ describe('API endpoint: /api/zone', () => {
     /* 
     ** GET Zone from Zipcode
     */
-    it('GET /api/zone/:zipcode should return an error if zipcode does not exist', (done) => {
+    it('GET /api/zone/zip/:zipcode should return an error if zipcode does not exist', (done) => {
         chai.request(server)
-            .get('/api/zone/99999')
+            .get('/api/zone/zip/99999')
             .end((err, res) => {
                 res.body.should.have.property("error").eql("Zipcode not available");
                 done();
             })
     })
 
-    it('GET /api/zone/:zipcode should return an a zone if zipcode exists', (done) => {
+    it('GET /api/zone/zip/:zipcode should return an a zone if zipcode exists', (done) => {
         chai.request(server)
-            .get('/api/zone/38655')
+            .get('/api/zone/zip/38655')
             .end((err, res) => {
                 res.body.should.have.property("message");
                 res.body.should.have.property("data");
                 res.body.data.should.have.property("zipcode");
+                done();
+            })
+    })
+
+    /*
+    ** GET Zone from Zone number
+    */
+    it('GET /api/zone/:zone should return an error if zone does not exist', (done) => {
+        chai.request(server)
+            .get('/api/zone/7C')
+            .end((err, res) => {
+                res.body.should.have.property("error").eql("Zone not found");
+                done();
+            })
+    })
+
+    it('GET /api/zone/:zone should return an a zone if zone exists', (done) => {
+        chai.request(server)
+            .get('/api/zone/7A')
+            .end((err, res) => {
+                res.body.should.have.property("message");
+                res.body.should.have.property("data");
                 done();
             })
     })
