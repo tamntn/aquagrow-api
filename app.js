@@ -21,6 +21,7 @@ var authenticate = require('./routes/authenticate');
 var plant = require('./routes/plant');
 var fish = require('./routes/fish');
 var zone = require('./routes/zone');
+var upload = require('./routes/upload');
 
 var app = express();
 
@@ -67,6 +68,7 @@ app.use('/', sensors);
 app.use('/', users);
 app.use('/', fish);
 app.use('/', zone);
+app.use('/', upload);
 app.use('/', plant); // Plant controller is last due to /api/:category
 
 // catch 404 and forward to error handler
