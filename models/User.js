@@ -25,6 +25,7 @@ const UserSchema = new Schema({
     },
     zipCode: String,
     phone: String,
+    pictureUrl: String,
     zone: {
         type: Schema.Types.ObjectId,
         ref: 'zone'
