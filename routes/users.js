@@ -2,6 +2,7 @@ const express = require('express');
 const moment = require('moment');
 const router = express.Router();
 const User = require('../models/User');
+const Zone = require('../models/Zone');
 
 /*
 ** /POST Route
@@ -48,25 +49,6 @@ router.get('/api/users', (req, res) => {
 })
 
 /*
-** /GET Route (By id)
-*/
-// app.get('/api/user/:id', (req, res) => {
-// 	User.findById(req.params.id, (err, user) => {
-// 		if (err) {
-// 			console.log(err);
-// 			res.send({
-// 				error: "GET user by id request failed"
-// 			});
-// 		} else {
-// 			res.send({
-// 				message: "GET user by id request successful",
-// 				user: user
-// 			})
-// 		}
-// 	})
-// })
-
-/*
 ** /GET Route (By username)
 */
 router.get('/api/user/:username', (req, res) => {
@@ -88,6 +70,63 @@ router.get('/api/user/:username', (req, res) => {
 				error: err.message
 			});
 		})
+})
+
+/*
+** /PUT Route
+*/
+router.put('/api/user/:username', (req, res) => {
+	let updateValues;
+	// If user update their zone, we need to reference the zone object
+	if (req.body.zone) {
+		Zone.findOne({ zone: req.body.zone })
+			.then((zone) => {
+				updateValues = {
+					zipCode: req.body.zipCode,
+					zone: zone,
+					phone: req.body.phone,
+					pictureUrl: req.body.pictureUrl
+				}
+				User.findOneAndUpdate({ username: req.params.username }, updateValues)
+					.then((user) => {
+						if (!user) {
+							res.send({
+								error: "User does not exist"
+							})
+						} else {
+							res.send({
+								message: "UPDATE user request successful",
+								data: user
+							})
+						}
+					})
+					.catch((err) => {
+						res.send({
+							error: err.message
+						})
+					})
+			})
+	} else {
+		updateValues = req.body;
+		User.findOneAndUpdate({ username: req.params.username }, updateValues)
+			.then((user) => {
+				if (!user) {
+					res.send({
+						error: "User does not exist"
+					})
+				} else {
+					res.send({
+						message: "UPDATE user request successful",
+						data: user
+					})
+				}
+			})
+			.catch((err) => {
+				res.send({
+					error: err.message
+				})
+			})
+	}
 })
 
 /*
