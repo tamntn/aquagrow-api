@@ -31,7 +31,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 if (process.env.NODE_ENV !== 'test') {
 	app.use(logger('dev'));
 }
@@ -63,7 +63,9 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(passport.initialize());
 
 // Redirect App to secure routes in deployment
-app.use(redirectToHTTPS([/localhost:(\d{4})/], []))
+if (process.env.NODE_ENV !== 'test') {
+	app.use(redirectToHTTPS([/localhost:(\d{4})/], []))
+}
 
 app.use('/', index);
 app.use('/', authenticate);
