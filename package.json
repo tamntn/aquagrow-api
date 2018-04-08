@@ -31,7 +31,8 @@
     "passport-jwt": "^3.0.1",
     "serve-favicon": "~2.4.5",
     "supertest": "^3.0.0",
-    "title-case": "^2.1.1"
+    "title-case": "^2.1.1",
+    "twilio": "^3.14.0"
   },
   "engines": {
     "node": "8.9.4"
