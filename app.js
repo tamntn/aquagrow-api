@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
+var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
 var databaseConfig = require('./config/db');
 require('./config/passport-jwt')(passport);
 
@@ -60,6 +61,9 @@ if (process.env.NODE_ENV !== 'test') {
 
 // Initialize passport
 app.use(passport.initialize());
+
+// Redirect App to secure routes in deployment
+app.use(redirectToHTTPS([/localhost:(\d{4})/], []))
 
 app.use('/', index);
 app.use('/', authenticate);
