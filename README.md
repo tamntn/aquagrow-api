@@ -28,3 +28,7 @@ npm run start-dev
 * [Passport-jwt](https://github.com/themikenicholson/passport-jwt)
 * [Geocoding API](https://developers.google.com/maps/documentation/geocoding/start)
 * [NodeJS Client Library for Google Maps API](https://github.com/googlemaps/google-maps-services-js)
+* Storing config in the environment
+    * [Reading - 12 Factor App](https://12factor.net/)
+    * [Npm package - dotenv](https://www.npmjs.com/package/dotenv)
+    * [Heroku configuration and config vars](https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application)
