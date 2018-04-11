@@ -24,6 +24,7 @@ var fish = require('./routes/fish');
 var zone = require('./routes/zone');
 var upload = require('./routes/upload');
 var sms = require('./routes/sms');
+var notification = require('./routes/Notification/notification');
 
 var app = express();
 
@@ -77,6 +78,7 @@ app.use('/', fish);
 app.use('/', zone);
 app.use('/', upload);
 app.use('/', sms);
+app.use('/', notification);
 app.use('/', plant); // Plant controller is last due to /api/:category
 
 // catch 404 and forward to error handler
