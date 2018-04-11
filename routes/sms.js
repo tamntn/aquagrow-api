@@ -3,14 +3,6 @@ const router = express.Router();
 const { accountSid, authToken, sendingNumber } = require('../config/twilio');
 const client = require('twilio')(accountSid, authToken);
 
-// client.messages
-//     .create({
-//         to: '+16623715507',
-//         from: '+16622004204',
-//         body: 'Hi from Twilio'
-//     })
-//     .then(message => console.log(message.sid));
-
 /*
 ** /POST Route - send welcome SMS after welcome form submission
 */
