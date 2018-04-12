@@ -53,6 +53,7 @@ router.get('/api/users', (req, res) => {
 */
 router.get('/api/user/:username', (req, res) => {
 	User.findOne({ username: req.params.username })
+		.select('-password')
 		.then((user) => {
 			if (!user) {
 				res.send({
