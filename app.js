@@ -25,6 +25,7 @@ var zone = require('./routes/zone');
 var upload = require('./routes/upload');
 var sms = require('./routes/sms');
 var notification = require('./routes/Notification/notification');
+var message = require('./routes/Notification/message');
 
 var app = express();
 
@@ -79,6 +80,7 @@ app.use('/', zone);
 app.use('/', upload);
 app.use('/', sms);
 app.use('/', notification);
+app.use('/', message);
 app.use('/', plant); // Plant controller is last due to /api/:category
 
 // catch 404 and forward to error handler
