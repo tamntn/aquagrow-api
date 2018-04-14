@@ -32,3 +32,6 @@ npm run start-dev
     * [Reading - 12 Factor App](https://12factor.net/)
     * [Npm package - dotenv](https://www.npmjs.com/package/dotenv)
     * [Heroku configuration and config vars](https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application)
+* Scheduling in Node.js:
+    * [Example by Twilio](https://www.twilio.com/docs/sms/tutorials/appointment-reminders-node-express)
+    * [node-cron](https://www.npmjs.com/package/cron)
