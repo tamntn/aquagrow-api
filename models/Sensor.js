@@ -21,11 +21,11 @@ const SensorSchema = new Schema({
         required: true
     },
     upperWaterLevel: {
-        type: String,
+        type: Boolean,
         // required: true
     },
     lowerWaterLevel: {
-        type: String,
+        type: Boolean,
         // required: true
     },
     pH: {
