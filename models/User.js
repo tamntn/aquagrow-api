@@ -4,6 +4,7 @@ var salt = bcrypt.genSaltSync(10);
 var Schema = mongoose.Schema;
 var ObjectId = mongoose.Schema.Types.ObjectId;
 var NotificationSchema = require('./Notification/Notification');
+var ReminderSettingSchema = require('./Notification/ReminderSetting');
 var MessageSchema = require('./Notification/Message');
 
 // Creating a Schema for users
@@ -36,8 +37,9 @@ const UserSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'portfolio',
     },
-    // TODO: Add notifications/reminders
+    // TODO: Implement Reminders
     notifications: [NotificationSchema],
+    reminders: [ReminderSettingSchema],
     messages: [MessageSchema]
 });
 
