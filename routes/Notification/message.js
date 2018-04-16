@@ -33,8 +33,8 @@ router.get('/api/message/:username', (req, res) => {
 /*
 ** /POST Route - create new message and push to user
 */
-router.post('/api/message', (req, res) => {
-    const username = req.body.username;
+router.post('/api/message/:username', (req, res) => {
+    const username = req.params.username;
     const newMessage = {
         createdAt: moment().format(),
         sender: req.body.sender,

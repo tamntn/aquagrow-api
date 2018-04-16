@@ -35,7 +35,7 @@ router.get('/api/notification/:username', (req, res) => {
 /*
 ** /POST Route - create new notification and push to user
 */
-router.post('/api/notification', (req, res) => {
+router.post('/api/notification/:username', (req, res) => {
     if (!(req.body.type in notificationTypes)) {
         res.send({
             error: "Invalid notification types"
@@ -45,7 +45,7 @@ router.post('/api/notification', (req, res) => {
             error: "Invalid notification aspects"
         })
     } else {
-        const username = req.body.username;
+        const username = req.params.username;
         const newNotification = {
             createdAt: moment().format(),
             message: req.body.message,
