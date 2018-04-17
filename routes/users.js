@@ -82,12 +82,9 @@ router.put('/api/user/:username', (req, res) => {
 	if (req.body.zone) {
 		Zone.findOne({ zone: req.body.zone })
 			.then((zone) => {
-				updateValues = {
-					zipCode: req.body.zipCode,
-					zone: zone,
-					phone: req.body.phone,
-					pictureUrl: req.body.pictureUrl
-				}
+				updateValues = req.body;
+				updateValues.zone = zone;
+				
 				User.findOneAndUpdate({ username: req.params.username }, updateValues)
 					.then((user) => {
 						if (!user) {
