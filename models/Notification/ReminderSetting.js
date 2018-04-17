@@ -90,19 +90,22 @@ ReminderSettingSchema.statics.sendNotifications = function (callback) {
     */
     function sendNotifications(reminderSettings) {
         console.log('Sending notifications...');
+        const User = mongoose.model('users');
         const client = new Twilio(accountSid, authToken);
-        reminderSettings.forEach(function (reminderSetting) {
+        reminderSettings.forEach(async function (reminderSetting) {
+            const reminderMessage = `Nemo 🐟: \nHi ${reminderSetting.name}. Just a reminder from AquaGrow.`
+
             // Create options to send the message
             const options = {
                 to: `+1${reminderSetting.phoneNumber}`,
                 from: sendingNumber,
                 /* eslint-disable max-len */
-                body: `Nemo 🐟: \nHi ${reminderSetting.name}. Just a reminder from AquaGrow.`,
+                body: reminderMessage,
                 /* eslint-enable max-len */
             };
 
             // Send the message!
-            client.messages.create(options, function (err, response) {
+            await client.messages.create(options, function (err, response) {
                 if (err) {
                     // Just log it for now
                     console.error(err);
@@ -114,6 +117,20 @@ ReminderSettingSchema.statics.sendNotifications = function (callback) {
                     console.log(`Message sent to ${masked}`);
                 }
             });
+
+            // TODO: POST the reminders to the User's reminders field
+            const newReminder = {
+                createdAt: moment().format(),
+                message: reminderMessage
+            }
+
+            User.findOneAndUpdate({ username: reminderSetting.username }, { $push: { reminders: newReminder } })
+                .then((user) => {
+                    console.log("Reminder added to user model");
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                })
         });
 
         // Don't wait on success/failure, just indicate all messages have been
