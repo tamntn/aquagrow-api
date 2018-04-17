@@ -4,7 +4,8 @@ var salt = bcrypt.genSaltSync(10);
 var Schema = mongoose.Schema;
 var ObjectId = mongoose.Schema.Types.ObjectId;
 var NotificationSchema = require('./Notification/Notification');
-var ReminderSettingSchema = require('./Notification/ReminderSetting');
+var ReminderSetting = require('./Notification/ReminderSetting');
+var ReminderSchema = require('./Notification/Reminder');
 var MessageSchema = require('./Notification/Message');
 
 // Creating a Schema for users
@@ -39,7 +40,11 @@ const UserSchema = new Schema({
     },
     // TODO: Implement Reminders
     notifications: [NotificationSchema],
-    reminders: [ReminderSettingSchema],
+    // reminderSettings: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'reminder'
+    // }],
+    reminders: [ReminderSchema],
     messages: [MessageSchema]
 });
 

@@ -27,6 +27,11 @@ var sms = require('./routes/sms');
 var notification = require('./routes/Notification/notification');
 var message = require('./routes/Notification/message');
 
+// reminder setup
+const reminderSetting = require('./routes/Notification/reminderSetting');
+const reminder = require('./routes/Notification/reminder');
+const scheduler = require('./scheduler');
+
 var app = express();
 
 // view engine setup
@@ -55,6 +60,8 @@ app.use(allowCrossDomain);
 // the root is at the 'public' folder itself
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
+app.locals.moment = require('moment'); // TODO: Reminder Setup
+
 mongoose.Promise = global.Promise;
 
 // Connect to mongoDB database
@@ -80,6 +87,8 @@ app.use('/', zone);
 app.use('/', upload);
 app.use('/', sms);
 app.use('/', notification);
+app.use('/', reminderSetting); // TODO: Reminder Setup
+app.use('/', reminder);
 app.use('/', message);
 app.use('/', plant); // Plant controller is last due to /api/:category
 
@@ -100,5 +109,7 @@ app.use(function (err, req, res, next) {
 	res.status(err.status || 500);
 	res.render('404');
 });
+
+scheduler.start(); // TODO: Reminder Setup
 
 module.exports = app;
