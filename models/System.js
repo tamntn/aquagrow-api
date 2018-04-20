@@ -13,9 +13,9 @@ const SystemSchema = new Schema({
         default: false
     },
     waterPump: {
-        type: Boolean,
+        type: Number,
         required: true,
-        default: false
+        default: 255
     },
     phPumpLow: {
         type: Boolean,

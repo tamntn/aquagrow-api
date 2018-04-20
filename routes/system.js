@@ -4,18 +4,41 @@ const System = require('../models/System');
 const User = require('../models/User');
 
 /*
-** /GET Route - Get system information associated with an user
+** /GET Route - Get system status associated with an user
 */
 router.get('/api/system/:username', function (req, res) {
     User.findOne({ username: req.params.username })
         .then((user) => {
             System.findOne({ user: user._id })
                 .populate('user', 'username')
+                // .populate('sensorData')
+                .select('-sensorData')
+                .then((system) => {
+                    res.send({
+                        message: "System status GET request successful",
+                        data: system
+                    })
+                })
+                .catch((err) => {
+                    res.send({
+                        error: err.message
+                    })
+                })
+        })
+})
+
+/*
+** /GET Route - Get system sensor data
+*/
+router.get('/api/system/data/:username', function (req, res) {
+    User.findOne({ username: req.params.username })
+        .then((user) => {
+            System.findOne({ user: user._id })
                 .populate('sensorData')
                 .then((system) => {
                     res.send({
-                        message: "System GET request successful",
-                        data: system
+                        message: "System data GET request successful",
+                        data: system.sensorData
                     })
                 })
                 .catch((err) => {

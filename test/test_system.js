@@ -67,7 +67,7 @@ describe('API endpoint: /api/system', () => {
         chai.request(server)
             .get(`/api/system/${newUser.username}`)
             .end((err, response) => {
-                response.body.should.have.property('message').eql('System GET request successful');
+                response.body.should.have.property('message').eql('System status GET request successful');
                 done();
             })
     })
@@ -110,14 +110,14 @@ describe('API endpoint: /api/system', () => {
             .put(`/api/system/${newUser.username}`)
             .send({
                 growLight: true,
-                waterPump: true,
+                waterPump: 185,
                 heatingMat: true
             })
             .end((err, response) => {
                 System.findOne({ _id: newSystem._id })
                     .then((system) => {
                         assert(system.growLight === true);
-                        assert(system.waterPump === true);
+                        assert(system.waterPump === 185);
                         assert(system.heatingMat === true);
                         done();
                     })
