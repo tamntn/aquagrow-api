@@ -74,7 +74,10 @@ router.post('/api/sensors/:systemId', function (req, res) {
         airTemp: req.body.airTemp,
         airHumidity: req.body.airHumidity,
         lightIntensity: req.body.lightIntensity,
-        waterTemp: req.body.waterTemp
+        waterTemp: req.body.waterTemp,
+        upperWaterLevel: req.body.upperWaterLevel,
+        lowerWaterLevel: req.body.lowerWaterLevel,
+        pH: req.body.pH
     });
 
     // Add new sensor data
