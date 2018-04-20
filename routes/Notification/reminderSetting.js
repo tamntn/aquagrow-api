@@ -33,7 +33,7 @@ router.post('/api/reminderSetting/:username', function (req, res, next) {
     const phoneNumber = req.body.phoneNumber;
     const message = req.body.message;
     const timeZone = req.body.timeZone;
-    const time = moment(req.body.time, 'MM-DD-YYYY hh:mma');
+    const time = momentTimeZone(req.body.time, 'MM-DD-YYYY hh:mm a').tz(timeZone);
     const repeat = req.body.repeat;
     const repeatDuration = req.body.repeatDuration;
 
@@ -47,7 +47,7 @@ router.post('/api/reminderSetting/:username', function (req, res, next) {
         repeat,
         repeatDuration
     });
-    
+
     reminderSetting.save()
         .then((result) => {
             res.send({
