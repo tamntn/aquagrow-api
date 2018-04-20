@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const moment = require('moment');
+const momentTimeZone = require('moment-timezone');
 const Twilio = require('twilio');
 const { accountSid, authToken, sendingNumber } = require('../../config/twilio');
 const { notificationRepeatDifferenceInMinutes } = require('../../config/notification');
@@ -47,11 +48,11 @@ const ReminderSettingSchema = new mongoose.Schema({
 // http://mongoosejs.com/docs/guide.html#methods
 ReminderSettingSchema.methods.requiresNotification = function (date) {
     const currentTime = moment(date).utc();
-    const setTime = moment(this.time).tz(this.timeZone).utc();
+    const setTime = moment(this.time).utc();
     const differenceInMinutes = Math.round(currentTime.diff(setTime, 'minutes', true));
-    // console.log(currentTime);
-    // console.log(setTime);
-    // console.log(differenceInMinutes);
+    console.log(currentTime);
+    console.log(setTime);
+    console.log(differenceInMinutes);
 
     if (differenceInMinutes < 0) {
         console.log('Too Early');
@@ -70,7 +71,7 @@ ReminderSettingSchema.methods.requiresNotification = function (date) {
 
 ReminderSettingSchema.statics.sendNotifications = function (callback) {
     // now
-    const searchDate = new Date();
+    const searchDate = moment();
 
     // Find all apointments that are scheduled at the current time.
     ReminderSetting
@@ -93,7 +94,7 @@ ReminderSettingSchema.statics.sendNotifications = function (callback) {
         const User = mongoose.model('users');
         const client = new Twilio(accountSid, authToken);
         reminderSettings.forEach(async function (reminderSetting) {
-            const reminderMessage = `Nemo 🐟: \nHi ${reminderSetting.name}. Just a reminder from AquaGrow.`
+            const reminderMessage = `Hi ${reminderSetting.name}, ${reminderSetting.message}`
 
             // Create options to send the message
             const options = {
