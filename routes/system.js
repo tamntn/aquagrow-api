@@ -11,7 +11,6 @@ router.get('/api/system/:username', function (req, res) {
         .then((user) => {
             System.findOne({ user: user._id })
                 .populate('user', 'username')
-                // .populate('sensorData')
                 .select('-sensorData')
                 .then((system) => {
                     res.send({
@@ -84,7 +83,7 @@ router.put('/api/system/:username', function (req, res) {
         .then((user) => {
             System.findOneAndUpdate({ user: user._id }, req.body)
                 .populate('user', 'username')
-                .populate('sensorData')
+                .select('-sensorData')
                 .then((system) => {
                     res.send({
                         message: "System PUT request successful",
