@@ -17,6 +17,11 @@ const SystemSchema = new Schema({
         required: true,
         default: 255
     },
+    waterPumpSetIntensity: {
+        type: Number,
+        required: true,
+        default: 100
+    },
     phPumpLow: {
         type: Boolean,
         required: true,
