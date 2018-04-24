@@ -42,4 +42,38 @@ router.post('/api/signin', (req, res) => {
         })
 })
 
+/*
+** /POST Route
+** Change a user's password
+*/
+router.post('/api/password/update', (req, res) => {
+    User.findOne({ username: req.body.username })
+        .then((user) => {
+            if (bcrypt.compareSync(req.body.oldPassword, user.password)) {
+                user.set({ password: req.body.newPassword });
+                user.save()
+                    .then((updatedUser) => {
+                        res.send({
+                            message: "User password changed successful",
+                            data: updatedUser
+                        })
+                    })
+                    .catch((err) => {
+                        res.send({
+                            error: err.message
+                        })
+                    })
+            } else {
+                res.send({
+                    error: "User password update failed: wrong old password!"
+                })
+            }
+        })
+        .catch((err) => {
+            res.send({
+                error: "User password update failed"
+            })
+        })
+})
+
 module.exports = router;
