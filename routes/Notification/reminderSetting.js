@@ -65,6 +65,7 @@ router.post('/api/reminderSetting/:username', function (req, res, next) {
 // PUT: UPDATE One ReminderSetting
 router.put('/api/reminderSetting/:id', function (req, res, next) {
     const reminderSettingId = req.params.id;
+    req.body.time = momentTimeZone.tz(req.body.time, 'MM-DD-YYYY hh:mm a', timeZone).utc();
 
     ReminderSetting.findByIdAndUpdate(reminderSettingId, req.body)
         .then((result) => {
