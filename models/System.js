@@ -42,35 +42,70 @@ const SystemSchema = new Schema({
         required: true,
         default: [20, 30]
     },
+    airTempNotification: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     airHumidityRange: {
         type: [Number],
         required: true,
         default: [40, 60]
+    },
+    airHumidityNotification: {
+        type: Boolean,
+        required: true,
+        default: false
     },
     lightIntensityRange: {
         type: [Number],
         required: true,
         default: [5000, 15000]
     },
+    lightIntensityNotification: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     waterTempRange: {
         type: [Number],
         required: true,
         default: [20, 25]
+    },
+    waterTempNotification: {
+        type: Boolean,
+        required: true,
+        default: false
     },
     phLevelRange: {
         type: [Number],
         required: true,
         default: [6.5, 8.0]
     },
+    phLevelNotification: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     upperWaterLevelConsecutiveTrigger: {
         type: Number,
         required: true,
         default: 0
     },
+    upperWaterLevelNotification: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     lowerWaterLevelConsecutiveTrigger: {
         type: Number,
         required: true,
         default: 0
+    },
+    lowerWaterLevelNotification: {
+        type: Boolean,
+        required: true,
+        default: false
     },
     sensorData: [{
         type: Schema.Types.ObjectId,

@@ -38,7 +38,6 @@ const UserSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'portfolio',
     },
-    // TODO: Implement Reminders
     notifications: [NotificationSchema],
     // reminderSettings: [{
     //     type: Schema.Types.ObjectId,
