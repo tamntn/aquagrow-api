@@ -49,6 +49,32 @@ router.get('/api/system/data/:username', function (req, res) {
 })
 
 /*
+** /GET Route - Get the latest sensor data
+*/
+router.get('/api/system/data/latest/:username', function (req, res) {
+    User.findOne({ username: req.params.username })
+        .then((user) => {
+            System.findOne({ user: user._id })
+                .populate({
+                    path: 'sensorData',
+                    options: { limit: 5 }
+                })
+                .slice('sensorData', -1)
+                .then((system) => {
+                    res.send({
+                        message: "System latest data GET request successful",
+                        data: system.sensorData
+                    })
+                })
+                .catch((err) => {
+                    res.send({
+                        error: err.message
+                    })
+                })
+        })
+})
+
+/*
 ** /POST Route - Create new system and assign to an user
 */
 router.post('/api/system', function (req, res) {
