@@ -7,7 +7,6 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const Sensor = require('../models/Sensor');
 const System = require('../models/System');
-const io = require('../bin/www');
 
 // Convert incoming data to Object
 // Use in case incoming data is a string of format 'key=value&key=value'
