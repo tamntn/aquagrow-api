@@ -7,6 +7,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const Sensor = require('../models/Sensor');
 const System = require('../models/System');
+const io = require('../bin/www');
 
 // Convert incoming data to Object
 // Use in case incoming data is a string of format 'key=value&key=value'
@@ -23,6 +24,7 @@ function stringToObject(input) {
 */
 router.get('/api/sensors', passport.authenticate('jwt', { session: false }), function (req, res) {
     Sensor.find({})
+        .limit(100)
         .then((sensors) => {
             res.send({
                 message: "Sensors GET request successful",
@@ -85,6 +87,8 @@ router.post('/api/sensors/:systemId', function (req, res) {
         .then((sensor) => {
             System.findByIdAndUpdate({ _id: req.params.systemId }, { $push: { sensorData: sensor } })
                 .then(() => {
+                    // Emit Event To The Server
+                    req.app.io.emit("newData");
                     res.send({
                         message: "Sensors POST request & saved to system successful",
                         data: sensor
