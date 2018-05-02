@@ -60,7 +60,7 @@ const SystemSchema = new Schema({
     lightIntensityRange: {
         type: [Number],
         required: true,
-        default: [5000, 15000]
+        default: [1500, 3000]
     },
     lightIntensityNotification: {
         type: Boolean,
