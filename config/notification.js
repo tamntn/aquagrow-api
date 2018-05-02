@@ -7,6 +7,7 @@ module.exports = {
     notificationAspects: {
         LIGHT: "light",
         TEMPERATURE: "temp",
+        HUMIDITY: "humidity",
         WATER: "water",
         PUMP: "pump",
         pHLEVEL: "pHlevel"

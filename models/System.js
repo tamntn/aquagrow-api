@@ -47,6 +47,7 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    airTempLastSentNotification: Date,
     airHumidityRange: {
         type: [Number],
         required: true,
@@ -57,6 +58,7 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    airHumidityLastSentNotification: Date,
     lightIntensityRange: {
         type: [Number],
         required: true,
@@ -67,6 +69,7 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    lightIntensityLastSentNotification: Date,
     waterTempRange: {
         type: [Number],
         required: true,
@@ -77,6 +80,7 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    waterTempLastSendNotification: Date,
     phLevelRange: {
         type: [Number],
         required: true,
@@ -87,6 +91,7 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    phLevelLastSentNotification: Date,
     upperWaterLevelConsecutiveTrigger: {
         type: Number,
         required: true,
@@ -97,6 +102,7 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    upperWaterLevelLastSentNotification: Date,
     lowerWaterLevelConsecutiveTrigger: {
         type: Number,
         required: true,
@@ -107,6 +113,7 @@ const SystemSchema = new Schema({
         required: true,
         default: false
     },
+    lowerWaterLevelLastSentNotification: Date,
     sensorData: [{
         type: Schema.Types.ObjectId,
         ref: 'sensors'
