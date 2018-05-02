@@ -25,25 +25,25 @@ var server = http.createServer(app);
 /*
 ** Socket.io server instane
 */
-var io = socketIo(server);
+// var io = socketIo(server);
 
-// Attach io instance to the app for use throughout routes
-app.io = io;
+// // Attach io instance to the app for use throughout routes
+// app.io = io;
 
-io.on('connect', client => {
-  console.log('User connected')
+// io.on('connect', client => {
+//   console.log('User connected')
 
-  // client.on('subscribeToTimer', (interval) => {
-  //   console.log('client is subscribing to timer with interval', interval);
-  //   setInterval(() => {
-  //     client.emit('timer', new Date());
-  //   }, interval);
-  // });
+//   // client.on('subscribeToTimer', (interval) => {
+//   //   console.log('client is subscribing to timer with interval', interval);
+//   //   setInterval(() => {
+//   //     client.emit('timer', new Date());
+//   //   }, interval);
+//   // });
 
-  client.on('disconnect', () => {
-    console.log('user disconnected')
-  })
-})
+//   client.on('disconnect', () => {
+//     console.log('user disconnected')
+//   })
+// })
 
 /**
  * Listen on provided port, on all network interfaces.
