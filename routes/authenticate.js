@@ -46,7 +46,7 @@ router.post('/api/signin', (req, res) => {
 ** /POST Route
 ** Change a user's password
 */
-router.post('/api/password/update', (req, res) => {
+router.put('/api/password/update', (req, res) => {
     User.findOne({ username: req.body.username })
         .then((user) => {
             if (bcrypt.compareSync(req.body.oldPassword, user.password)) {
