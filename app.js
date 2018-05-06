@@ -48,7 +48,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 var allowCrossDomain = function (req, res, next) {
-	var allowedOrigins = ['http://localhost:3001', 'https://app.aquagrow.life'];
+	var allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'https://app.aquagrow.life'];
 	var origin = req.headers.origin;
 	if (allowedOrigins.indexOf(origin) > -1) {
 		res.setHeader('Access-Control-Allow-Origin', origin);
